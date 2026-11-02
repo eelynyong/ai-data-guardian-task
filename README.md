@@ -55,3 +55,19 @@ If you have never coded before, start with **[docs/START_HERE_BEGINNER_GUIDE.md]
 > AI Data Guardian is an HR data-quality management platform prototype that detects missing, duplicate, inconsistent and sensitive information in CSV datasets, visualizes department scores, and supports explainable AI recommendations and employee correction workflows.
 
 See the project requirements/design in `docs/FRONTEND_UI_UX.md` and the future integration sequence in `docs/NEXT_BACKEND_STEPS.md`.
+
+## Project Structure
+
+- frontend/ — React + TypeScript (Eelyn)
+- middleware/ — Node.js + Express (Eelyn)
+- backend/ — Python + FastAPI (Nabila)
+- datasets/ — Synthetic HR training and testing CSVs
+- policies/ — HR policy documents
+- docs/ — Documentation
+- scripts/ — Dataset utilities
+
+## Run Frontend
+
+cd frontend
+npm install
+npm run dev
