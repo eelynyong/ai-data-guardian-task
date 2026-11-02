@@ -80,7 +80,65 @@ export default function App() {
   function changeRole(to:Role){setRole(to);setDepartment('All departments');navigate(to==='Employee'?'mycorrections':'overview')}
   function changeStatus(id:string,status:FindingStatus){setFindings(old=>old.map(f=>f.id===id?{...f,status}:f));setSelectedIssue(old=>old?.id===id?{...old,status}:old);setNotice(status==='Awaiting Employee'?'An in-app employee request was created (demo only).':`Issue moved to ${status.toLowerCase()}.`)}
   function openIssue(f:Finding){setSelectedIssue(f);setNotice('')}
-  function loadRows(rows:CsvRow[],name:string){setUploadRows(rows);setUploadName(name);setUploadError('');const scans=scanDemoRows(rows);setFindings([...initialFindings,...scans]);setActiveImportTab('review');setNotice(`Analyzed ${rows.length.toLocaleString()} synthetic rows locally. Found ${scans.length} demo rule findings.`)}
+  
+async function loadRows(rows: CsvRow[], name: string) {
+  setUploadRows(rows)
+  setUploadName(name)
+  setUploadError('')
+  setActiveImportTab('review')
+
+  try {
+    // Send CSV rows to our Express middleware
+    const response = await fetch('/api/v1/quality/analyze', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ rows })
+    })
+
+    if (!response.ok) {
+      throw new Error('Middleware returned an error.')
+    }
+
+    const result: {
+      rowsAnalyzed: number
+      totalFindings: number
+      findings: Finding[]
+    } = await response.json()
+
+    // Use the findings returned by Express
+    setFindings([
+      ...initialFindings,
+      ...result.findings
+    ])
+
+    setNotice(
+      `Express analyzed ${result.rowsAnalyzed} rows and found ` +
+      `${result.totalFindings} new issues.`
+    )
+
+  } catch (error) {
+    // If Express is offline, show a clear warning
+    setUploadError(
+      'Cannot reach Express middleware. ' +
+      'Please start the server on port 3001.'
+    )
+
+    // Keep the frontend demo usable
+    const localFindings = scanDemoRows(rows)
+
+    setFindings([
+      ...initialFindings,
+      ...localFindings
+    ])
+
+    setNotice(
+      'Middleware unavailable. Local demo scan was used instead.'
+    )
+  }
+}
+
   async function readFile(file:File){if(file.size>3_000_000){setUploadError('Choose a CSV smaller than 3 MB for this browser-only demo.');return}if(!file.name.toLowerCase().endsWith('.csv')){setUploadError('Only .csv files are supported in this starter.');return}const text=await file.text();const rows=parseCsv(text);if(!rows.length||!rows[0].record_type){setUploadError('CSV must contain record_type and at least one data row. See DATA_DICTIONARY.md.');return}loadRows(rows,file.name)}
   function exportReport(){const safe=(s:string)=>{const v=/^[\s]*[=+\-@]/.test(s)?`'${s}`:s;return `"${v.replaceAll('"','""')}"`};const header='id,type,department,severity,status,policy\n';const body=scopedFindings.map(f=>[f.id,f.type,f.department,f.severity,f.status,f.policy].map(safe).join(',')).join('\n');const blob=new Blob([header+body],{type:'text/csv;charset=utf-8'});const url=URL.createObjectURL(blob);const anchor=document.createElement('a');anchor.href=url;anchor.download='ai-data-guardian-demo-issues.csv';anchor.click();URL.revokeObjectURL(url);setNotice('Downloaded a local demo findings summary; no private cell values are included.')}
   const isEmployee=role==='Employee'
@@ -111,7 +169,7 @@ export default function App() {
 
         {page==='employees'&&!isEmployee&&<><div className="page-heading"><div><p className="eyebrow">EMPLOYEE RECORDS</p><h1>Employees</h1><p>Quality scores describe HR record completeness and validity, not job performance.</p></div></div><section className="panel"><div className="table-toolbar"><label className="searchbox"><Search size={17}/><input placeholder="Search name or employee ID..." value={search} onChange={e=>setSearch(e.target.value)}/></label><span className="muted">{scopedEmployees.length} sample employees</span></div><div className="table-scroller"><table className="data-table"><thead><tr><th>Employee</th><th>ID</th><th>Department</th><th>Position</th><th>Record quality</th><th></th></tr></thead><tbody>{scopedEmployees.filter(e=>(e.name+' '+e.id).toLowerCase().includes(search.toLowerCase())).map(e=><tr key={e.id}><td><div className="person"><span className="avatar">{e.avatar}</span><span><strong>{e.name}</strong><small>{e.email}</small></span></div></td><td className="mono muted">{e.id}</td><td>{e.department}</td><td className="muted">{e.title}</td><td><ScoreTag score={e.quality}/></td><td><button className="icon-button" title="View employee" onClick={()=>setSelectedEmployee(e)}><ChevronRight size={18}/></button></td></tr>)}</tbody></table></div></section></>}
 
-        {page==='imports'&&!isEmployee&&<><div className="page-heading"><div><p className="eyebrow">DATA INGESTION</p><h1>Data imports</h1><p>Upload a synthetic CSV to see row-level quality findings instantly in your browser.</p></div><button className="button secondary" onClick={()=>{loadRows(parseCsv(sampleCsv),'built-in-sample.csv')}}><FileCheck2 size={17}/> Load example</button></div><div className="import-layout"><section className="panel upload-panel"><div className="panel-heading"><div><h2>Upload your CSV</h2><p>Runs locally in this demo. Nothing is sent to a server.</p></div><IconBadge icon={CloudUpload} tone="blue"/></div><button className="upload-zone" onClick={()=>fileRef.current?.click()}><UploadCloud size={30}/><strong>Click to choose a CSV file</strong><span>Supports sample HR event CSV, up to 3 MB</span><span className="button secondary small">Browse files</span></button><input ref={fileRef} className="visually-hidden" aria-label="Choose CSV file" type="file" accept=".csv,text/csv" onChange={e=>e.target.files?.[0]&&void readFile(e.target.files[0])}/>{uploadError&&<p className="form-error"><CircleAlert size={15}/>{uploadError}</p>}<div className="upload-tips"><strong><ShieldCheck size={16}/> Before uploading</strong><p>Use synthetic data only. The full version will validate access, store files privately and perform server-side scanning.</p></div></section><section className="panel import-summary"><div className="panel-heading"><div><h2>Latest analysis</h2><p>{uploadName||'No upload selected'}</p></div><span className="soft-badge">Browser demo</span></div><div className="import-stats"><div><strong>{uploadRows.length.toLocaleString()}</strong><span>Rows analyzed</span></div><div><strong>{findings.filter(f=>f.id.startsWith('CSV-')).length}</strong><span>New findings</span></div><div><strong>{new Set(uploadRows.map(r=>r.department).filter(Boolean)).size}</strong><span>Departments</span></div></div><div className="import-note"><FileClock size={20}/><span>The built-in sample intentionally includes prohibited account details, a duplicate claim and a negative amount.</span></div></section></div><section className="panel"><div className="panel-heading"><div><h2>CSV document review</h2><p>Click a red cell to inspect the rule and recommended action</p></div><div className="tabs"><button className={activeImportTab==='review'?'selected':''} onClick={()=>setActiveImportTab('review')}>Review rows</button><button className={activeImportTab==='history'?'selected':''} onClick={()=>setActiveImportTab('history')}>Upload history</button></div></div>{activeImportTab==='review'?<RecordTable rows={uploadRows} findings={findings.filter(f=>f.id.startsWith('CSV-'))} onOpen={openIssue}/>:<div className="history-entry"><FileSpreadsheet size={20}/><span><strong>{uploadName||'No uploads in this session'}</strong><small>{uploadRows.length?`${uploadRows.length} rows · completed in browser`:'Load a file to create a local demo entry'}</small></span><StatusPill value={uploadRows.length?'Resolved':'Open'}/></div>}</section></>}
+        {page==='imports'&&!isEmployee&&<><div className="page-heading"><div><p className="eyebrow">DATA INGESTION</p><h1>Data imports</h1><p>Upload a synthetic CSV to see row-level quality findings instantly in your browser.</p></div><button className="button secondary" onClick={()=>{loadRows(parseCsv(sampleCsv),'built-in-sample.csv')}}><FileCheck2 size={17}/> Load example</button></div><div className="import-layout"><section className="panel upload-panel"><div className="panel-heading"><div><h2>Upload your CSV</h2><p>Synthetic CSV rows are checked by your local Express middleware.</p></div><IconBadge icon={CloudUpload} tone="blue"/></div><button className="upload-zone" onClick={()=>fileRef.current?.click()}><UploadCloud size={30}/><strong>Click to choose a CSV file</strong><span>Supports sample HR event CSV, up to 3 MB</span><span className="button secondary small">Browse files</span></button><input ref={fileRef} className="visually-hidden" aria-label="Choose CSV file" type="file" accept=".csv,text/csv" onChange={e=>e.target.files?.[0]&&void readFile(e.target.files[0])}/>{uploadError&&<p className="form-error"><CircleAlert size={15}/>{uploadError}</p>}<div className="upload-tips"><strong><ShieldCheck size={16}/> Before uploading</strong><p>Use synthetic data only. The full version will validate access, store files privately and perform server-side scanning.</p></div></section><section className="panel import-summary"><div className="panel-heading"><div><h2>Latest analysis</h2><p>{uploadName||'No upload selected'}</p></div><span className="soft-badge">Express API demo</span></div><div className="import-stats"><div><strong>{uploadRows.length.toLocaleString()}</strong><span>Rows analyzed</span></div><div><strong>{findings.filter(f=>f.id.startsWith('CSV-')).length}</strong><span>New findings</span></div><div><strong>{new Set(uploadRows.map(r=>r.department).filter(Boolean)).size}</strong><span>Departments</span></div></div><div className="import-note"><FileClock size={20}/><span>The built-in sample intentionally includes prohibited account details, a duplicate claim and a negative amount.</span></div></section></div><section className="panel"><div className="panel-heading"><div><h2>CSV document review</h2><p>Click a red cell to inspect the rule and recommended action</p></div><div className="tabs"><button className={activeImportTab==='review'?'selected':''} onClick={()=>setActiveImportTab('review')}>Review rows</button><button className={activeImportTab==='history'?'selected':''} onClick={()=>setActiveImportTab('history')}>Upload history</button></div></div>{activeImportTab==='review'?<RecordTable rows={uploadRows} findings={findings.filter(f=>f.id.startsWith('CSV-'))} onOpen={openIssue}/>:<div className="history-entry"><FileSpreadsheet size={20}/><span><strong>{uploadName||'No uploads in this session'}</strong><small>{uploadRows.length?`${uploadRows.length} rows · completed in browser`:'Load a file to create a local demo entry'}</small></span><StatusPill value={uploadRows.length?'Resolved':'Open'}/></div>}</section></>}
 
         {page==='issues'&&!isEmployee&&<><div className="page-heading"><div><p className="eyebrow">REVIEW & RESOLUTION</p><h1>Issue center</h1><p>Investigate findings, ask employees for corrections, and track resolutions.</p></div><button className="button secondary" onClick={exportReport}><Download size={16}/> Export summary</button></div><div className="issue-metrics"><Metric label="Open / pending" value={String(openFindings.length)} note="Selected department scope" icon={CircleAlert} tone="yellow"/><Metric label="Critical alerts" value={String(scopedFindings.filter(f=>f.severity==='Critical'&&f.status!=='Resolved').length)} note="Sensitive-data review" icon={ShieldAlert} tone="red"/><Metric label="Awaiting employee" value={String(scopedFindings.filter(f=>f.status==='Awaiting Employee').length)} note="Requests created in demo" icon={Bell} tone="purple"/></div><section className="panel"><div className="table-toolbar"><label className="searchbox"><Search size={17}/><input placeholder="Search issues, employee, policy..." value={search} onChange={e=>setSearch(e.target.value)}/></label><select className="standard-select" aria-label="Filter by severity" value={severityFilter} onChange={e=>setSeverityFilter(e.target.value)}><option>All severities</option><option>Critical</option><option>High</option><option>Medium</option><option>Low</option></select></div><div className="table-scroller"><table className="data-table"><thead><tr><th>Issue</th><th>Employee</th><th>Department</th><th>Severity</th><th>Status</th><th>Date</th><th></th></tr></thead><tbody>{scopedFindings.filter(f=>(severityFilter==='All severities'||f.severity===severityFilter)&&(f.id+' '+f.type+' '+f.employee+' '+f.policy).toLowerCase().includes(search.toLowerCase())).sort((a,b)=>severityOrder[a.severity]-severityOrder[b.severity]).map(f=><tr key={f.id}><td><strong>{f.type}</strong><small className="table-sub">{f.id} · {f.field}</small></td><td>{f.employee}</td><td className="muted">{f.department}</td><td><StatusPill value={f.severity}/></td><td><StatusPill value={f.status}/></td><td className="muted">{f.date}</td><td><button className="icon-button" aria-label={`Review ${f.id}`} onClick={()=>openIssue(f)}><ChevronRight size={18}/></button></td></tr>)}</tbody></table></div></section></>}
 
