@@ -1,73 +1,299 @@
-# AI Data Guardian — beginner React frontend starter
 
-This is a **working React + TypeScript frontend prototype** for an HR data-quality tool. It is intended for local learning and a synthetic-data demo. It is **not** yet connected to an authentication server, Gemini Enterprise, Supabase, Google Cloud Storage, Express or FastAPI.
+# AI Data Guardian
+### AI-Powered HR Data Quality Management Platform
 
-## Start in 3 commands
+**Project:** AI Data Integration  
+**Team Members:** Eelyn & Nabila  
+**Repository:** ai-data-guardian-task
 
-```bash
-npm install
-npm run dev
-```
+## Project Overview
 
-Open the local address printed in the terminal (normally `http://127.0.0.1:5173`).
+AI Data Guardian is a full-stack web application designed to help Human Resources (HR) teams monitor, analyze, and improve the quality of employee-related data.
 
-If you have never coded before, start with **[docs/START_HERE_BEGINNER_GUIDE.md](docs/START_HERE_BEGINNER_GUIDE.md)**. The instructions begin with installing Git, creating a GitHub account, installing VS Code and Node.js.
+The application will identify missing information, duplicate records, invalid data, potentially sensitive information (PII), and unusual patterns in HR datasets.
 
-## What works today
+It will also provide AI-assisted recommendations to help HR teams understand and resolve data quality issues.
 
-- Responsive HR dashboard and department quality drill-down.
-- Employee list, mock quality percentages and detail drawer.
-- CSV file import preview and basic browser-side validation: required employee ID, duplicate claim ID, possible account number in claim text, negative/high claim amount, invalid leave ordering and missing attendance checkout.
-- Clickable highlighted CSV cells and masked evidence.
-- HR issue center with severity/status filters, local request/resolution buttons.
-- Employee role-switch demonstration for a fictional employee, with in-app correction status.
-- Policy cards, preset AI recommendation demonstration, local CSV issue-summary export.
-- Two reproducible synthetic CSV datasets plus an answer-key manifest and six sample policy documents.
+## Project Objectives
 
-## What is NOT implemented yet
+- Monitor HR data quality across departments.
+- Detect missing, duplicate, invalid, and inconsistent data.
+- Detect sensitive information in claims and other HR records.
+- Identify unusual patterns in claims, leave, and attendance.
+- Display department and employee record-quality scores.
+- Highlight problematic CSV rows and columns.
+- Provide policy-grounded AI recommendations.
+- Allow HR staff to review and manage data correction requests.
+- Notify employees when corrections are required.
+- Maintain records of data quality findings and resolutions.
 
-- Real login, passwords, authorization, persistent database or real employee identification.
-- Real Gemini API calls, policy retrieval, PII de-identification service or cloud storage.
-- Persistent issue/case history or real employee email notifications.
-- Python backend cross-dataset validation and robust quality scoring.
+## Technology Stack
 
-**Never upload actual HR files to this browser-only proof of concept.** The scanner is simplified for learning, not a production security or compliance control.
-
-## Important directories
-
-| Folder | Contents |
-|---|---|
-| `src/` | React components, data and styles |
-| `datasets/` | `hr_train.csv`, `hr_test.csv`, answer key, notes |
-| `policies/` | Six fictional HR policy templates |
-| `docs/` | Beginner guide, UI/UX design, API roadmap, data dictionary, demo guide |
-| `scripts/` | Reproducible synthetic CSV generator and workbook builder |
-
-## Scripts
-
-- `npm run dev` — start development server.
-- `npm run build` — type-check and compile the frontend for distribution.
-- `npm run preview` — preview the production build locally.
-- `node scripts/generate_synthetic_data.mjs` — regenerate deterministic synthetic CSVs.
-
-## Suggested GitHub description
-
-> AI Data Guardian is an HR data-quality management platform prototype that detects missing, duplicate, inconsistent and sensitive information in CSV datasets, visualizes department scores, and supports explainable AI recommendations and employee correction workflows.
-
-See the project requirements/design in `docs/FRONTEND_UI_UX.md` and the future integration sequence in `docs/NEXT_BACKEND_STEPS.md`.
+| Layer | Technology | Owner |
+|---|---|---|
+| Frontend | React.js + TypeScript | Eelyn |
+| Middleware | Node.js + Express.js | Eelyn |
+| Backend | Python + FastAPI | Nabila |
+| AI Integration | Gemini Enterprise | Planned |
+| Storage | Google Cloud Storage | Planned |
+| Database | Supabase or Firestore | To be finalized |
+| Version Control | Git + GitHub | Both |
+| Development Environment | Visual Studio Code | Both |
 
 ## Project Structure
 
-- frontend/ — React + TypeScript (Eelyn)
-- middleware/ — Node.js + Express (Eelyn)
-- backend/ — Python + FastAPI (Nabila)
-- datasets/ — Synthetic HR training and testing CSVs
-- policies/ — HR policy documents
-- docs/ — Documentation
-- scripts/ — Dataset utilities
+```text
+ai-data-guardian-task/
+│
+├── frontend/
+│   ├── src/
+│   │   ├── App.tsx
+│   │   ├── demoData.ts
+│   │   ├── main.tsx
+│   │   └── styles.css
+│   ├── package.json
+│   └── vite.config.ts
+│
+├── middleware/
+│   └── README.md
+│
+├── backend/
+│   └── README.md
+│
+├── datasets/
+│   ├── hr_train.csv
+│   ├── hr_test.csv
+│   └── evaluation_answer_key.json
+│
+├── policies/
+├── docs/
+├── scripts/
+├── .gitignore
+└── README.md
+```
 
-## Run Frontend
+## Team Responsibilities
 
+### Eelyn — Frontend & Middleware
+
+Frontend responsibilities:
+
+- Design the HR dashboard and user interface.
+- Implement overview, employee, and department pages.
+- Develop CSV upload and document-review interfaces.
+- Display issue detection results.
+- Build AI recommendation screens.
+- Develop HR and employee notification interfaces.
+- Integrate frontend components with API endpoints.
+
+Middleware responsibilities:
+
+- Develop Express API routes.
+- Connect React frontend to FastAPI backend.
+- Handle requests and responses.
+- Integrate authentication and role authorization.
+- Coordinate CSV processing workflows.
+- Connect middleware to database and storage services.
+- Handle errors and API validation.
+
+### Nabila — Backend
+
+Backend responsibilities:
+
+- Develop Python FastAPI services.
+- Build HR data quality validation logic.
+- Detect missing and duplicate records.
+- Detect invalid information and sensitive data.
+- Analyze unusual data patterns.
+- Generate data quality results.
+- Integrate backend AI services as agreed.
+- Test backend functionality using synthetic datasets.
+
+## Planned Application Features
+
+### 1. Authentication
+- HR login and logout.
+- Multiple HR user accounts.
+- Role-based access.
+- Employee self-service access.
+
+### 2. HR Dashboard
+- Overall data quality score.
+- Claims, leave, and attendance overview.
+- Department-level quality percentages.
+- Employee-level record-quality details.
+- Trend and issue summary charts.
+
+### 3. CSV Data Upload
+- Upload HR datasets in CSV format.
+- Analyze uploaded records.
+- Display detected data quality issues.
+- Highlight affected rows and columns.
+
+### 4. Data Quality Detection
+- Missing information.
+- Duplicate records.
+- Invalid values.
+- Sensitive information in claims.
+- Unusual claims and attendance patterns.
+- Inconsistent leave and attendance records.
+
+### 5. AI Recommendations
+- Explain detected data quality issues.
+- Suggest corrective actions.
+- Reference relevant HR policies.
+- Support HR review before action.
+
+### 6. Correction Workflow
+- HR reviews detected issues.
+- HR requests corrections from employees.
+- Employees submit corrected information.
+- HR reviews and approves corrections.
+- Findings are revalidated and tracked.
+
+### 7. Reports
+- Data quality summaries.
+- Department comparisons.
+- Issue status reports.
+- Exportable results.
+
+## Current Development Status
+
+The project is currently a proof of concept (POC).
+
+**Available in the React frontend demo:**
+
+- HR dashboard UI.
+- Department and employee pages.
+- Synthetic CSV upload and browser-based rule checks.
+- Highlighted data quality findings.
+- Issue review interface.
+- Simulated employee correction workflow.
+- Policy library interface.
+- Preset AI recommendation demonstrations.
+
+**Not yet implemented:**
+
+- Real user authentication.
+- Express middleware API.
+- FastAPI quality engine.
+- Persistent database.
+- Cloud Storage integration.
+- Live Gemini Enterprise integration.
+- Real employee notifications.
+
+The frontend currently uses synthetic sample data and demo functionality.
+
+## Running the Frontend
+
+### Requirements
+
+- Node.js
+- npm
+- Visual Studio Code
+
+### Windows PowerShell
+
+Open a terminal in the project root:
+
+```powershell
 cd frontend
-npm install
-npm run dev
+npm.cmd install
+npm.cmd run dev
+```
+
+Open the URL displayed in the terminal, usually:
+
+http://127.0.0.1:5173
+
+### Test the Frontend Build
+
+While inside the `frontend` folder:
+
+```powershell
+npm.cmd run build
+```
+
+### Verify Synthetic Datasets
+
+```powershell
+npm.cmd run test:data
+```
+
+## Dataset Information
+
+The `datasets/` folder contains synthetic HR data for development and testing.
+
+- `hr_train.csv` — 1,500 synthetic records.
+- `hr_test.csv` — 400 synthetic records.
+- `evaluation_answer_key.json` — documented seeded test issues.
+
+These files contain fictional information created for testing.
+
+**Do not upload real employee or sensitive HR data to the current prototype.**
+
+## HR Policy Documents
+
+The `policies/` folder contains fictional policy examples covering:
+
+1. Claims and reimbursement.
+2. Personal data protection.
+3. Attendance management.
+4. Leave management.
+5. Employee data standards.
+6. Data correction procedures.
+
+These documents will support validation rules and future policy-grounded AI recommendations.
+
+## Development Workflow
+
+The `main` branch contains the integrated project.
+
+Development should take place on feature branches.
+
+Suggested branches:
+
+- `feature/frontend`
+- `feature/middleware`
+- `feature/backend`
+- `feature/ai-integration`
+
+After implementation and testing, changes can be merged into `main` through Pull Requests.
+
+## Documentation
+
+Additional documentation is available in `docs/`, including:
+
+- Full application specification.
+- Frontend UI/UX design.
+- Beginner setup guide.
+- Data dictionary.
+- Backend integration roadmap.
+- Gemini policy setup guidance.
+- Testing checklist.
+- Final demo script.
+
+Some original setup documents may refer to the starter's previous folder structure. Use the commands in this README for the current layout.
+
+## Project Workflow
+
+1. Upload CSV data.
+2. Validate and analyze records.
+3. Detect data quality issues.
+4. Review highlighted findings.
+5. Generate recommendations.
+6. Request employee corrections.
+7. Review corrected information.
+8. Update quality results and reports.
+
+## Security Note
+
+This project is currently intended for development using synthetic data.
+
+Before handling real HR information, the application will require authentication, authorization, secure storage, access controls, audit logging, and appropriate privacy and security reviews.
+
+---
+
+**AI Data Guardian — AI Data Integration Project**
+
+Developed by Eelyn & Nabila.
