@@ -1,0 +1,203 @@
+{
+  "description": "Known deliberately injected findings only. Additional heuristic alerts may occur.",
+  "created_for": "AI Data Guardian synthetic demonstration",
+  "records": {
+    "train": 1500,
+    "test": 400
+  },
+  "seed": 20261102,
+  "findings": [
+    {
+      "file": "hr_train.csv",
+      "csv_row": 14,
+      "record_id": "TRN-REC-00013",
+      "rule_code": "EMP_REQUIRED_ID",
+      "field": "employee_id",
+      "issue_kind": "missing_id"
+    },
+    {
+      "file": "hr_train.csv",
+      "csv_row": 43,
+      "record_id": "TRN-REC-00042",
+      "rule_code": "CLM_PII_BANK",
+      "field": "claim_description",
+      "issue_kind": "bank_in_claim"
+    },
+    {
+      "file": "hr_train.csv",
+      "csv_row": 83,
+      "record_id": "TRN-REC-00082",
+      "rule_code": "CLM_DUPLICATE_ID",
+      "field": "claim_id",
+      "issue_kind": "duplicate_claim"
+    },
+    {
+      "file": "hr_train.csv",
+      "csv_row": 116,
+      "record_id": "TRN-REC-00115",
+      "rule_code": "CLM_NEGATIVE_AMOUNT",
+      "field": "claim_amount",
+      "issue_kind": "negative_claim"
+    },
+    {
+      "file": "hr_train.csv",
+      "csv_row": 163,
+      "record_id": "TRN-REC-00162",
+      "rule_code": "CLM_AMOUNT_ANOMALY",
+      "field": "claim_amount",
+      "issue_kind": "high_claim"
+    },
+    {
+      "file": "hr_train.csv",
+      "csv_row": 228,
+      "record_id": "TRN-REC-00227",
+      "rule_code": "LEV_DATE_ORDER",
+      "field": "leave_end",
+      "issue_kind": "invalid_leave"
+    },
+    {
+      "file": "hr_train.csv",
+      "csv_row": 349,
+      "record_id": "TRN-REC-00348",
+      "rule_code": "ATT_MISSING_CHECKOUT",
+      "field": "check_out",
+      "issue_kind": "missing_checkout"
+    },
+    {
+      "file": "hr_train.csv",
+      "csv_row": 482,
+      "record_id": "TRN-REC-00481",
+      "rule_code": "EMP_EMAIL_FORMAT",
+      "field": "work_email",
+      "issue_kind": "invalid_email"
+    },
+    {
+      "file": "hr_train.csv",
+      "csv_row": 595,
+      "record_id": "TRN-REC-00594",
+      "rule_code": "EMP_INVALID_DEPT",
+      "field": "department",
+      "issue_kind": "invalid_department"
+    },
+    {
+      "file": "hr_train.csv",
+      "csv_row": 723,
+      "record_id": "TRN-REC-00722",
+      "rule_code": "CLM_PII_BANK",
+      "field": "claim_description",
+      "issue_kind": "bank_in_claim"
+    },
+    {
+      "file": "hr_train.csv",
+      "csv_row": 813,
+      "record_id": "TRN-REC-00812",
+      "rule_code": "CLM_DUPLICATE_ID",
+      "field": "claim_id",
+      "issue_kind": "duplicate_claim"
+    },
+    {
+      "file": "hr_train.csv",
+      "csv_row": 1017,
+      "record_id": "TRN-REC-01016",
+      "rule_code": "LEV_DATE_ORDER",
+      "field": "leave_end",
+      "issue_kind": "invalid_leave"
+    },
+    {
+      "file": "hr_train.csv",
+      "csv_row": 1206,
+      "record_id": "TRN-REC-01205",
+      "rule_code": "CLM_NEGATIVE_AMOUNT",
+      "field": "claim_amount",
+      "issue_kind": "negative_claim"
+    },
+    {
+      "file": "hr_train.csv",
+      "csv_row": 1429,
+      "record_id": "TRN-REC-01428",
+      "rule_code": "ATT_MISSING_CHECKOUT",
+      "field": "check_out",
+      "issue_kind": "missing_checkout"
+    },
+    {
+      "file": "hr_test.csv",
+      "csv_row": 15,
+      "record_id": "TST-REC-00014",
+      "rule_code": "EMP_REQUIRED_ID",
+      "field": "employee_id",
+      "issue_kind": "missing_id"
+    },
+    {
+      "file": "hr_test.csv",
+      "csv_row": 43,
+      "record_id": "TST-REC-00042",
+      "rule_code": "CLM_PII_BANK",
+      "field": "claim_description",
+      "issue_kind": "bank_in_claim"
+    },
+    {
+      "file": "hr_test.csv",
+      "csv_row": 73,
+      "record_id": "TST-REC-00072",
+      "rule_code": "CLM_DUPLICATE_ID",
+      "field": "claim_id",
+      "issue_kind": "duplicate_claim"
+    },
+    {
+      "file": "hr_test.csv",
+      "csv_row": 93,
+      "record_id": "TST-REC-00092",
+      "rule_code": "CLM_NEGATIVE_AMOUNT",
+      "field": "claim_amount",
+      "issue_kind": "negative_claim"
+    },
+    {
+      "file": "hr_test.csv",
+      "csv_row": 133,
+      "record_id": "TST-REC-00132",
+      "rule_code": "CLM_AMOUNT_ANOMALY",
+      "field": "claim_amount",
+      "issue_kind": "high_claim"
+    },
+    {
+      "file": "hr_test.csv",
+      "csv_row": 177,
+      "record_id": "TST-REC-00176",
+      "rule_code": "LEV_DATE_ORDER",
+      "field": "leave_end",
+      "issue_kind": "invalid_leave"
+    },
+    {
+      "file": "hr_test.csv",
+      "csv_row": 209,
+      "record_id": "TST-REC-00208",
+      "rule_code": "ATT_MISSING_CHECKOUT",
+      "field": "check_out",
+      "issue_kind": "missing_checkout"
+    },
+    {
+      "file": "hr_test.csv",
+      "csv_row": 252,
+      "record_id": "TST-REC-00251",
+      "rule_code": "EMP_EMAIL_FORMAT",
+      "field": "work_email",
+      "issue_kind": "invalid_email"
+    },
+    {
+      "file": "hr_test.csv",
+      "csv_row": 317,
+      "record_id": "TST-REC-00316",
+      "rule_code": "EMP_INVALID_DEPT",
+      "field": "department",
+      "issue_kind": "invalid_department"
+    },
+    {
+      "file": "hr_test.csv",
+      "csv_row": 383,
+      "record_id": "TST-REC-00382",
+      "rule_code": "CLM_PII_BANK",
+      "field": "claim_description",
+      "issue_kind": "bank_in_claim"
+    }
+  ]
+}

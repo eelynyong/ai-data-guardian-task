@@ -1,0 +1,401 @@
+record_type,record_id,employee_id,employee_name,department,work_email,employment_status,event_date,claim_id,claim_category,claim_amount,claim_description,leave_id,leave_type,leave_start,leave_end,leave_days,check_in,check_out,approval_status,source_updated_at
+employee,TST-REC-00001,EMP-0309,Aina Lim,Information Technology,aina.lim.309@example.test,Active,2026-08-09,,,,,,,,,,,,Submitted,2026-08-09
+claim,TST-REC-00002,EMP-0359,Dania Nair,Information Technology,dania.nair.359@example.test,Active,2026-09-06,TST-CLM-00002,Transport,28,Client meeting taxi fare,,,,,,,,Approved,2026-09-08
+claim,TST-REC-00003,EMP-0155,Kavya Hassan,Operations,kavya.hassan.155@example.test,Active,2026-10-05,TST-CLM-00003,Training,147,Approved training fee,,,,,,,,Approved,2026-10-05
+claim,TST-REC-00004,EMP-0276,Wei Lee,Human Resources,wei.lee.276@example.test,Active,2026-09-04,TST-CLM-00004,Parking,138,Office parking reimbursement,,,,,,,,Approved,2026-09-07
+claim,TST-REC-00005,EMP-0356,Wei Hassan,Human Resources,wei.hassan.356@example.test,Active,2026-10-25,TST-CLM-00005,Parking,53,Office parking reimbursement,,,,,,,,Pending,2026-10-28
+leave,TST-REC-00006,EMP-0330,Jia Tan,Operations,jia.tan.330@example.test,Active,2026-10-12,,,,,TST-LEV-00006,Emergency,2026-10-12,2026-10-13,2,,,Approved,2026-10-13
+leave,TST-REC-00007,EMP-0357,Aina Nair,Finance,aina.nair.357@example.test,Active,2026-09-20,,,,,TST-LEV-00007,Medical,2026-09-20,2026-09-21,2,,,Pending,2026-09-22
+attendance,TST-REC-00008,EMP-0255,Omar Das,Operations,omar.das.255@example.test,Active,2026-10-21,,,,,,,,,,2026-10-21T09:00:00+08:00,2026-10-21T18:00:00+08:00,Pending,2026-10-23
+attendance,TST-REC-00009,EMP-0172,Lina Nair,Finance,lina.nair.172@example.test,Active,2026-09-16,,,,,,,,,,2026-09-16T09:00:00+08:00,2026-09-16T18:00:00+08:00,Pending,2026-09-19
+attendance,TST-REC-00010,EMP-0264,Hakim Lee,Information Technology,hakim.lee.264@example.test,Active,2026-09-25,,,,,,,,,,2026-09-25T09:00:00+08:00,2026-09-25T18:00:00+08:00,Approved,2026-09-28
+employee,TST-REC-00011,EMP-0352,Priya Hassan,Finance,priya.hassan.352@example.test,Active,2026-08-05,,,,,,,,,,,,Approved,2026-08-07
+claim,TST-REC-00012,EMP-0230,Arif Yusof,Operations,arif.yusof.230@example.test,Active,2026-08-17,TST-CLM-00012,Meal,275,Travel to branch meeting,,,,,,,,Submitted,2026-08-17
+claim,TST-REC-00013,EMP-0114,Sofia Rahman,Information Technology,sofia.rahman.114@example.test,Active,2026-08-24,TST-CLM-00013,Meal,278,Travel to branch meeting,,,,,,,,Approved,2026-08-25
+claim,TST-REC-00014,,Kavya Tan,Human Resources,kavya.tan.331@example.test,Active,2026-08-02,TST-CLM-00014,Transport,59,Client meeting taxi fare,,,,,,,,Approved,2026-08-04
+claim,TST-REC-00015,EMP-0131,Tariq Lim,Human Resources,tariq.lim.131@example.test,Active,2026-09-24,TST-CLM-00015,Meal,209,Travel to branch meeting,,,,,,,,Pending,2026-09-27
+leave,TST-REC-00016,EMP-0224,Priya Karim,Information Technology,priya.karim.224@example.test,Active,2026-10-27,,,,,TST-LEV-00016,Medical,2026-10-27,2026-10-27,1,,,Pending,2026-10-28
+leave,TST-REC-00017,EMP-0292,Wei Abdullah,Finance,wei.abdullah.292@example.test,Active,2026-09-13,,,,,TST-LEV-00017,Medical,2026-09-13,2026-09-16,4,,,Pending,2026-09-13
+attendance,TST-REC-00018,EMP-0228,Wei Karim,Sales & Marketing,wei.karim.228@example.test,Active,2026-08-01,,,,,,,,,,2026-08-01T09:00:00+08:00,2026-08-01T18:00:00+08:00,Approved,2026-08-01
+attendance,TST-REC-00019,EMP-0330,Jia Tan,Operations,jia.tan.330@example.test,Active,2026-10-24,,,,,,,,,,2026-10-24T09:00:00+08:00,2026-10-24T18:00:00+08:00,Approved,2026-10-27
+attendance,TST-REC-00020,EMP-0281,Iman Abdullah,Human Resources,iman.abdullah.281@example.test,Active,2026-10-08,,,,,,,,,,2026-10-08T09:00:00+08:00,2026-10-08T18:00:00+08:00,Approved,2026-10-10
+employee,TST-REC-00021,EMP-0306,Sofia Rahman,Human Resources,sofia.rahman.306@example.test,Active,2026-09-07,,,,,,,,,,,,Approved,2026-09-08
+claim,TST-REC-00022,EMP-0116,Wei Rahman,Human Resources,wei.rahman.116@example.test,Active,2026-10-02,TST-CLM-00022,Meal,407,Travel to branch meeting,,,,,,,,Submitted,2026-10-03
+claim,TST-REC-00023,EMP-0107,Kavya Rahman,Finance,kavya.rahman.107@example.test,Active,2026-10-15,TST-CLM-00023,Travel,288,Team lunch allowance,,,,,,,,Pending,2026-10-17
+claim,TST-REC-00024,EMP-0110,Nadia Rahman,Operations,nadia.rahman.110@example.test,Active,2026-08-21,TST-CLM-00024,Meal,121,Travel to branch meeting,,,,,,,,Pending,2026-08-23
+claim,TST-REC-00025,EMP-0311,Dania Lim,Human Resources,dania.lim.311@example.test,Active,2026-09-17,TST-CLM-00025,Transport,144,Client meeting taxi fare,,,,,,,,Approved,2026-09-17
+leave,TST-REC-00026,EMP-0156,Lina Hassan,Human Resources,lina.hassan.156@example.test,Active,2026-10-06,,,,,TST-LEV-00026,Medical,2026-10-06,2026-10-07,2,,,Approved,2026-10-06
+leave,TST-REC-00027,EMP-0271,Omar Lee,Human Resources,omar.lee.271@example.test,Active,2026-09-18,,,,,TST-LEV-00027,Medical,2026-09-18,2026-09-19,2,,,Approved,2026-09-21
+attendance,TST-REC-00028,EMP-0173,Mika Nair,Sales & Marketing,mika.nair.173@example.test,Active,2026-10-05,,,,,,,,,,2026-10-05T09:00:00+08:00,2026-10-05T18:00:00+08:00,Pending,2026-10-08
+attendance,TST-REC-00029,EMP-0216,Hakim Karim,Human Resources,hakim.karim.216@example.test,Active,2026-10-08,,,,,,,,,,2026-10-08T09:00:00+08:00,2026-10-08T18:00:00+08:00,Approved,2026-10-09
+attendance,TST-REC-00030,EMP-0147,Tariq Tan,Finance,tariq.tan.147@example.test,Active,2026-10-18,,,,,,,,,,2026-10-18T09:00:00+08:00,2026-10-18T18:00:00+08:00,Pending,2026-10-19
+employee,TST-REC-00031,EMP-0308,Wei Rahman,Sales & Marketing,wei.rahman.308@example.test,Active,2026-10-11,,,,,,,,,,,,Submitted,2026-10-13
+claim,TST-REC-00032,EMP-0321,Rafiq Lim,Human Resources,rafiq.lim.321@example.test,Active,2026-09-18,TST-CLM-00032,Office supplies,218,Stationery and supplies,,,,,,,,Submitted,2026-09-20
+claim,TST-REC-00033,EMP-0105,Iman Rahman,Operations,iman.rahman.105@example.test,Active,2026-09-15,TST-CLM-00033,Parking,417,Office parking reimbursement,,,,,,,,Approved,2026-09-16
+claim,TST-REC-00034,EMP-0331,Kavya Tan,Human Resources,kavya.tan.331@example.test,Active,2026-10-23,TST-CLM-00034,Meal,278,Travel to branch meeting,,,,,,,,Approved,2026-10-23
+claim,TST-REC-00035,EMP-0323,Tariq Lim,Sales & Marketing,tariq.lim.323@example.test,Active,2026-09-04,TST-CLM-00035,Travel,27,Team lunch allowance,,,,,,,,Pending,2026-09-07
+leave,TST-REC-00036,EMP-0134,Arif Tan,Information Technology,arif.tan.134@example.test,Active,2026-10-17,,,,,TST-LEV-00036,Medical,2026-10-17,2026-10-18,2,,,Submitted,2026-10-20
+leave,TST-REC-00037,EMP-0307,Tariq Rahman,Finance,tariq.rahman.307@example.test,Active,2026-09-11,,,,,TST-LEV-00037,Annual,2026-09-11,2026-09-13,3,,,Approved,2026-09-11
+attendance,TST-REC-00038,EMP-0312,Hakim Lim,Finance,hakim.lim.312@example.test,Active,2026-10-08,,,,,,,,,,2026-10-08T09:00:00+08:00,2026-10-08T18:00:00+08:00,Approved,2026-10-08
+attendance,TST-REC-00039,EMP-0171,Kavya Nair,Human Resources,kavya.nair.171@example.test,Active,2026-08-04,,,,,,,,,,2026-08-04T09:00:00+08:00,2026-08-04T18:00:00+08:00,Submitted,2026-08-06
+attendance,TST-REC-00040,EMP-0206,Nadia Wong,Human Resources,nadia.wong.206@example.test,Active,2026-09-16,,,,,,,,,,2026-09-16T09:00:00+08:00,2026-09-16T18:00:00+08:00,Approved,2026-09-17
+employee,TST-REC-00041,EMP-0350,Nadia Hassan,Operations,nadia.hassan.350@example.test,Active,2026-08-16,,,,,,,,,,,,Submitted,2026-08-16
+claim,TST-REC-00042,EMP-0270,Nadia Lee,Operations,nadia.lee.270@example.test,Active,2026-10-21,TST-CLM-00042,Training,25,Please send reimbursement to FAKE ACCOUNT 1111-2222-3333 (synthetic test pattern),,,,,,,,Pending,2026-10-24
+claim,TST-REC-00043,EMP-0346,Jia Hassan,Human Resources,jia.hassan.346@example.test,Active,2026-08-16,TST-CLM-00043,Training,34,Approved training fee,,,,,,,,Submitted,2026-08-18
+claim,TST-REC-00044,EMP-0132,Wei Lim,Finance,wei.lim.132@example.test,Active,2026-10-15,TST-CLM-00044,Travel,398,Team lunch allowance,,,,,,,,Pending,2026-10-17
+claim,TST-REC-00045,EMP-0223,Omar Karim,Sales & Marketing,omar.karim.223@example.test,Active,2026-09-07,TST-CLM-00045,Training,101,Approved training fee,,,,,,,,Approved,2026-09-10
+leave,TST-REC-00046,EMP-0220,Lina Karim,Operations,lina.karim.220@example.test,Active,2026-09-04,,,,,TST-LEV-00046,Emergency,2026-09-04,2026-09-04,1,,,Approved,2026-09-06
+leave,TST-REC-00047,EMP-0148,Wei Tan,Sales & Marketing,wei.tan.148@example.test,Active,2026-08-24,,,,,TST-LEV-00047,Medical,2026-08-24,2026-08-27,4,,,Submitted,2026-08-27
+attendance,TST-REC-00048,EMP-0219,Kavya Karim,Information Technology,kavya.karim.219@example.test,Active,2026-10-05,,,,,,,,,,2026-10-05T09:00:00+08:00,2026-10-05T18:00:00+08:00,Approved,2026-10-07
+attendance,TST-REC-00049,EMP-0214,Arif Karim,Information Technology,arif.karim.214@example.test,Active,2026-10-14,,,,,,,,,,2026-10-14T09:00:00+08:00,2026-10-14T18:00:00+08:00,Pending,2026-10-15
+attendance,TST-REC-00050,EMP-0287,Omar Abdullah,Finance,omar.abdullah.287@example.test,Active,2026-08-10,,,,,,,,,,2026-08-10T09:00:00+08:00,2026-08-10T18:00:00+08:00,Approved,2026-08-12
+employee,TST-REC-00051,EMP-0148,Wei Tan,Sales & Marketing,wei.tan.148@example.test,Active,2026-10-18,,,,,,,,,,,,Submitted,2026-10-21
+claim,TST-REC-00052,EMP-0309,Aina Lim,Information Technology,aina.lim.309@example.test,Active,2026-10-07,TST-CLM-00052,Training,276,Approved training fee,,,,,,,,Pending,2026-10-08
+claim,TST-REC-00053,EMP-0136,Hakim Tan,Human Resources,hakim.tan.136@example.test,Active,2026-08-03,TST-CLM-00053,Meal,218,Travel to branch meeting,,,,,,,,Submitted,2026-08-03
+claim,TST-REC-00054,EMP-0212,Wei Wong,Finance,wei.wong.212@example.test,Active,2026-10-03,TST-CLM-00054,Training,234,Approved training fee,,,,,,,,Pending,2026-10-04
+claim,TST-REC-00055,EMP-0313,Iman Lim,Sales & Marketing,iman.lim.313@example.test,Active,2026-09-27,TST-CLM-00055,Meal,225,Travel to branch meeting,,,,,,,,Approved,2026-09-28
+leave,TST-REC-00056,EMP-0216,Hakim Karim,Human Resources,hakim.karim.216@example.test,Active,2026-08-24,,,,,TST-LEV-00056,Compassionate,2026-08-24,2026-08-24,1,,,Approved,2026-08-26
+leave,TST-REC-00057,EMP-0206,Nadia Wong,Human Resources,nadia.wong.206@example.test,Active,2026-10-11,,,,,TST-LEV-00057,Emergency,2026-10-11,2026-10-12,2,,,Submitted,2026-10-13
+attendance,TST-REC-00058,EMP-0121,Iman Lim,Human Resources,iman.lim.121@example.test,Active,2026-08-11,,,,,,,,,,2026-08-11T09:00:00+08:00,2026-08-11T18:00:00+08:00,Submitted,2026-08-13
+attendance,TST-REC-00059,EMP-0151,Dania Hassan,Human Resources,dania.hassan.151@example.test,Active,2026-10-01,,,,,,,,,,2026-10-01T09:00:00+08:00,2026-10-01T18:00:00+08:00,Submitted,2026-10-04
+attendance,TST-REC-00060,EMP-0236,Lina Yusof,Human Resources,lina.yusof.236@example.test,Active,2026-10-06,,,,,,,,,,2026-10-06T09:00:00+08:00,2026-10-06T18:00:00+08:00,Submitted,2026-10-07
+employee,TST-REC-00061,EMP-0209,Rafiq Wong,Information Technology,rafiq.wong.209@example.test,Active,2026-08-02,,,,,,,,,,,,Approved,2026-08-04
+claim,TST-REC-00062,EMP-0211,Tariq Wong,Human Resources,tariq.wong.211@example.test,Active,2026-08-17,TST-CLM-00062,Parking,83,Office parking reimbursement,,,,,,,,Submitted,2026-08-17
+claim,TST-REC-00063,EMP-0262,Arif Lee,Finance,arif.lee.262@example.test,Active,2026-08-24,TST-CLM-00063,Transport,20,Client meeting taxi fare,,,,,,,,Pending,2026-08-27
+claim,TST-REC-00064,EMP-0315,Kavya Lim,Operations,kavya.lim.315@example.test,Active,2026-08-09,TST-CLM-00064,Training,154,Approved training fee,,,,,,,,Approved,2026-08-10
+claim,TST-REC-00065,EMP-0305,Rafiq Rahman,Operations,rafiq.rahman.305@example.test,Active,2026-08-19,TST-CLM-00065,Parking,154,Office parking reimbursement,,,,,,,,Approved,2026-08-20
+leave,TST-REC-00066,EMP-0160,Priya Hassan,Operations,priya.hassan.160@example.test,Active,2026-08-24,,,,,TST-LEV-00066,Emergency,2026-08-24,2026-08-27,4,,,Submitted,2026-08-27
+leave,TST-REC-00067,EMP-0282,Jia Abdullah,Finance,jia.abdullah.282@example.test,Active,2026-10-03,,,,,TST-LEV-00067,Medical,2026-10-03,2026-10-05,3,,,Approved,2026-10-03
+attendance,TST-REC-00068,EMP-0155,Kavya Hassan,Operations,kavya.hassan.155@example.test,Active,2026-09-03,,,,,,,,,,2026-09-03T09:00:00+08:00,2026-09-03T18:00:00+08:00,Submitted,2026-09-05
+attendance,TST-REC-00069,EMP-0164,Wei Hassan,Information Technology,wei.hassan.164@example.test,Active,2026-10-21,,,,,,,,,,2026-10-21T09:00:00+08:00,2026-10-21T18:00:00+08:00,Approved,2026-10-22
+attendance,TST-REC-00070,EMP-0104,Hakim Rahman,Information Technology,hakim.rahman.104@example.test,Active,2026-09-01,,,,,,,,,,2026-09-01T09:00:00+08:00,2026-09-01T18:00:00+08:00,Approved,2026-09-01
+employee,TST-REC-00071,EMP-0240,Priya Yusof,Operations,priya.yusof.240@example.test,Active,2026-09-18,,,,,,,,,,,,Pending,2026-09-19
+claim,TST-REC-00072,EMP-0112,Priya Rahman,Finance,priya.rahman.112@example.test,Active,2026-10-13,TST-CLM-00065,Office supplies,32,Stationery and supplies,,,,,,,,Pending,2026-10-15
+claim,TST-REC-00073,EMP-0209,Rafiq Wong,Information Technology,rafiq.wong.209@example.test,Active,2026-08-26,TST-CLM-00073,Training,392,Approved training fee,,,,,,,,Approved,2026-08-27
+claim,TST-REC-00074,EMP-0117,Aina Lim,Finance,aina.lim.117@example.test,Active,2026-10-02,TST-CLM-00074,Office supplies,19,Stationery and supplies,,,,,,,,Approved,2026-10-04
+claim,TST-REC-00075,EMP-0309,Aina Lim,Information Technology,aina.lim.309@example.test,Active,2026-10-20,TST-CLM-00075,Meal,348,Travel to branch meeting,,,,,,,,Submitted,2026-10-23
+leave,TST-REC-00076,EMP-0144,Priya Tan,Information Technology,priya.tan.144@example.test,Active,2026-09-01,,,,,TST-LEV-00076,Emergency,2026-09-01,2026-09-04,4,,,Approved,2026-09-01
+leave,TST-REC-00077,EMP-0278,Arif Abdullah,Sales & Marketing,arif.abdullah.278@example.test,Active,2026-09-17,,,,,TST-LEV-00077,Annual,2026-09-17,2026-09-19,3,,,Approved,2026-09-18
+attendance,TST-REC-00078,EMP-0303,Omar Rahman,Sales & Marketing,omar.rahman.303@example.test,Active,2026-09-12,,,,,,,,,,2026-09-12T09:00:00+08:00,2026-09-12T18:00:00+08:00,Approved,2026-09-12
+attendance,TST-REC-00079,EMP-0111,Omar Rahman,Human Resources,omar.rahman.111@example.test,Active,2026-10-11,,,,,,,,,,2026-10-11T09:00:00+08:00,2026-10-11T18:00:00+08:00,Approved,2026-10-12
+attendance,TST-REC-00080,EMP-0179,Tariq Nair,Information Technology,tariq.nair.179@example.test,Active,2026-10-03,,,,,,,,,,2026-10-03T09:00:00+08:00,2026-10-03T18:00:00+08:00,Submitted,2026-10-05
+employee,TST-REC-00081,EMP-0114,Sofia Rahman,Information Technology,sofia.rahman.114@example.test,Active,2026-08-17,,,,,,,,,,,,Pending,2026-08-18
+claim,TST-REC-00082,EMP-0276,Wei Lee,Human Resources,wei.lee.276@example.test,Active,2026-10-22,TST-CLM-00082,Training,172,Approved training fee,,,,,,,,Approved,2026-10-25
+claim,TST-REC-00083,EMP-0322,Sofia Lim,Finance,sofia.lim.322@example.test,Active,2026-09-06,TST-CLM-00083,Training,283,Approved training fee,,,,,,,,Approved,2026-09-06
+claim,TST-REC-00084,EMP-0244,Wei Yusof,Information Technology,wei.yusof.244@example.test,Active,2026-09-25,TST-CLM-00084,Training,185,Approved training fee,,,,,,,,Approved,2026-09-27
+claim,TST-REC-00085,EMP-0256,Priya Das,Human Resources,priya.das.256@example.test,Active,2026-10-23,TST-CLM-00085,Parking,313,Office parking reimbursement,,,,,,,,Submitted,2026-10-24
+leave,TST-REC-00086,EMP-0206,Nadia Wong,Human Resources,nadia.wong.206@example.test,Active,2026-09-10,,,,,TST-LEV-00086,Medical,2026-09-10,2026-09-11,2,,,Approved,2026-09-12
+leave,TST-REC-00087,EMP-0201,Iman Wong,Human Resources,iman.wong.201@example.test,Active,2026-10-09,,,,,TST-LEV-00087,Medical,2026-10-09,2026-10-10,2,,,Approved,2026-10-09
+attendance,TST-REC-00088,EMP-0339,Tariq Tan,Information Technology,tariq.tan.339@example.test,Active,2026-10-16,,,,,,,,,,2026-10-16T09:00:00+08:00,2026-10-16T18:00:00+08:00,Submitted,2026-10-18
+attendance,TST-REC-00089,EMP-0272,Priya Lee,Finance,priya.lee.272@example.test,Active,2026-08-05,,,,,,,,,,2026-08-05T09:00:00+08:00,2026-08-05T18:00:00+08:00,Submitted,2026-08-08
+attendance,TST-REC-00090,EMP-0334,Nadia Tan,Information Technology,nadia.tan.334@example.test,Active,2026-08-24,,,,,,,,,,2026-08-24T09:00:00+08:00,2026-08-24T18:00:00+08:00,Submitted,2026-08-24
+employee,TST-REC-00091,EMP-0346,Jia Hassan,Human Resources,jia.hassan.346@example.test,Active,2026-08-21,,,,,,,,,,,,Submitted,2026-08-23
+claim,TST-REC-00092,EMP-0155,Kavya Hassan,Operations,kavya.hassan.155@example.test,Active,2026-09-06,TST-CLM-00092,Training,-45,Approved training fee,,,,,,,,Approved,2026-09-07
+claim,TST-REC-00093,EMP-0176,Priya Nair,Human Resources,priya.nair.176@example.test,Active,2026-08-21,TST-CLM-00093,Training,409,Approved training fee,,,,,,,,Pending,2026-08-23
+claim,TST-REC-00094,EMP-0230,Arif Yusof,Operations,arif.yusof.230@example.test,Active,2026-09-03,TST-CLM-00094,Office supplies,78,Stationery and supplies,,,,,,,,Approved,2026-09-04
+claim,TST-REC-00095,EMP-0184,Hakim Ismail,Information Technology,hakim.ismail.184@example.test,Active,2026-09-23,TST-CLM-00095,Transport,390,Client meeting taxi fare,,,,,,,,Submitted,2026-09-26
+leave,TST-REC-00096,EMP-0148,Wei Tan,Sales & Marketing,wei.tan.148@example.test,Active,2026-08-21,,,,,TST-LEV-00096,Medical,2026-08-21,2026-08-21,1,,,Approved,2026-08-23
+leave,TST-REC-00097,EMP-0173,Mika Nair,Sales & Marketing,mika.nair.173@example.test,Active,2026-08-17,,,,,TST-LEV-00097,Emergency,2026-08-17,2026-08-19,3,,,Approved,2026-08-20
+attendance,TST-REC-00098,EMP-0342,Arif Hassan,Finance,arif.hassan.342@example.test,Active,2026-08-13,,,,,,,,,,2026-08-13T09:00:00+08:00,2026-08-13T18:00:00+08:00,Approved,2026-08-13
+attendance,TST-REC-00099,EMP-0190,Nadia Ismail,Operations,nadia.ismail.190@example.test,Active,2026-08-03,,,,,,,,,,2026-08-03T09:00:00+08:00,2026-08-03T18:00:00+08:00,Submitted,2026-08-04
+attendance,TST-REC-00100,EMP-0319,Omar Lim,Information Technology,omar.lim.319@example.test,Active,2026-08-07,,,,,,,,,,2026-08-07T09:00:00+08:00,2026-08-07T18:00:00+08:00,Pending,2026-08-08
+employee,TST-REC-00101,EMP-0286,Nadia Abdullah,Human Resources,nadia.abdullah.286@example.test,Active,2026-08-22,,,,,,,,,,,,Approved,2026-08-24
+claim,TST-REC-00102,EMP-0216,Hakim Karim,Human Resources,hakim.karim.216@example.test,Active,2026-10-15,TST-CLM-00102,Meal,84,Travel to branch meeting,,,,,,,,Pending,2026-10-18
+claim,TST-REC-00103,EMP-0308,Wei Rahman,Sales & Marketing,wei.rahman.308@example.test,Active,2026-09-07,TST-CLM-00103,Parking,91,Office parking reimbursement,,,,,,,,Approved,2026-09-08
+claim,TST-REC-00104,EMP-0171,Kavya Nair,Human Resources,kavya.nair.171@example.test,Active,2026-09-09,TST-CLM-00104,Meal,84,Travel to branch meeting,,,,,,,,Pending,2026-09-11
+claim,TST-REC-00105,EMP-0231,Dania Yusof,Human Resources,dania.yusof.231@example.test,Active,2026-10-09,TST-CLM-00105,Parking,98,Office parking reimbursement,,,,,,,,Approved,2026-10-10
+leave,TST-REC-00106,EMP-0292,Wei Abdullah,Finance,wei.abdullah.292@example.test,Active,2026-10-18,,,,,TST-LEV-00106,Annual,2026-10-18,2026-10-20,3,,,Approved,2026-10-21
+leave,TST-REC-00107,EMP-0144,Priya Tan,Information Technology,priya.tan.144@example.test,Active,2026-09-08,,,,,TST-LEV-00107,Emergency,2026-09-08,2026-09-09,2,,,Approved,2026-09-08
+attendance,TST-REC-00108,EMP-0203,Kavya Wong,Sales & Marketing,kavya.wong.203@example.test,Active,2026-08-19,,,,,,,,,,2026-08-19T09:00:00+08:00,2026-08-19T18:00:00+08:00,Approved,2026-08-19
+attendance,TST-REC-00109,EMP-0310,Arif Lim,Operations,arif.lim.310@example.test,Active,2026-09-02,,,,,,,,,,2026-09-02T09:00:00+08:00,2026-09-02T18:00:00+08:00,Pending,2026-09-02
+attendance,TST-REC-00110,EMP-0354,Sofia Hassan,Information Technology,sofia.hassan.354@example.test,Active,2026-10-09,,,,,,,,,,2026-10-09T09:00:00+08:00,2026-10-09T18:00:00+08:00,Approved,2026-10-11
+employee,TST-REC-00111,EMP-0245,Aina Das,Operations,aina.das.245@example.test,Active,2026-10-17,,,,,,,,,,,,Submitted,2026-10-19
+claim,TST-REC-00112,EMP-0229,Aina Yusof,Information Technology,aina.yusof.229@example.test,Active,2026-09-26,TST-CLM-00112,Training,346,Approved training fee,,,,,,,,Pending,2026-09-27
+claim,TST-REC-00113,EMP-0242,Sofia Yusof,Finance,sofia.yusof.242@example.test,Active,2026-09-09,TST-CLM-00113,Travel,342,Team lunch allowance,,,,,,,,Approved,2026-09-10
+claim,TST-REC-00114,EMP-0132,Wei Lim,Finance,wei.lim.132@example.test,Active,2026-08-21,TST-CLM-00114,Meal,145,Travel to branch meeting,,,,,,,,Submitted,2026-08-23
+claim,TST-REC-00115,EMP-0152,Hakim Hassan,Finance,hakim.hassan.152@example.test,Active,2026-09-27,TST-CLM-00115,Travel,139,Team lunch allowance,,,,,,,,Submitted,2026-09-28
+leave,TST-REC-00116,EMP-0141,Mika Tan,Human Resources,mika.tan.141@example.test,Active,2026-08-18,,,,,TST-LEV-00116,Annual,2026-08-18,2026-08-21,4,,,Approved,2026-08-19
+leave,TST-REC-00117,EMP-0310,Arif Lim,Operations,arif.lim.310@example.test,Active,2026-10-22,,,,,TST-LEV-00117,Annual,2026-10-22,2026-10-25,4,,,Approved,2026-10-22
+attendance,TST-REC-00118,EMP-0123,Kavya Lim,Sales & Marketing,kavya.lim.123@example.test,Active,2026-10-22,,,,,,,,,,2026-10-22T09:00:00+08:00,2026-10-22T18:00:00+08:00,Submitted,2026-10-22
+attendance,TST-REC-00119,EMP-0179,Tariq Nair,Information Technology,tariq.nair.179@example.test,Active,2026-08-09,,,,,,,,,,2026-08-09T09:00:00+08:00,2026-08-09T18:00:00+08:00,Submitted,2026-08-10
+attendance,TST-REC-00120,EMP-0299,Kavya Rahman,Information Technology,kavya.rahman.299@example.test,Active,2026-10-26,,,,,,,,,,2026-10-26T09:00:00+08:00,2026-10-26T18:00:00+08:00,Submitted,2026-10-29
+employee,TST-REC-00121,EMP-0285,Mika Abdullah,Operations,mika.abdullah.285@example.test,Active,2026-10-02,,,,,,,,,,,,Pending,2026-10-05
+claim,TST-REC-00122,EMP-0290,Sofia Abdullah,Operations,sofia.abdullah.290@example.test,Active,2026-08-18,TST-CLM-00122,Training,398,Approved training fee,,,,,,,,Approved,2026-08-19
+claim,TST-REC-00123,EMP-0178,Sofia Nair,Sales & Marketing,sofia.nair.178@example.test,Active,2026-10-12,TST-CLM-00123,Office supplies,90,Stationery and supplies,,,,,,,,Pending,2026-10-13
+claim,TST-REC-00124,EMP-0209,Rafiq Wong,Information Technology,rafiq.wong.209@example.test,Active,2026-08-02,TST-CLM-00124,Transport,154,Client meeting taxi fare,,,,,,,,Submitted,2026-08-02
+claim,TST-REC-00125,EMP-0341,Aina Hassan,Human Resources,aina.hassan.341@example.test,Active,2026-08-23,TST-CLM-00125,Transport,20,Client meeting taxi fare,,,,,,,,Approved,2026-08-23
+leave,TST-REC-00126,EMP-0353,Rafiq Hassan,Sales & Marketing,rafiq.hassan.353@example.test,Active,2026-10-26,,,,,TST-LEV-00126,Emergency,2026-10-26,2026-10-26,1,,,Approved,2026-10-27
+leave,TST-REC-00127,EMP-0123,Kavya Lim,Sales & Marketing,kavya.lim.123@example.test,Active,2026-09-06,,,,,TST-LEV-00127,Medical,2026-09-06,2026-09-09,4,,,Pending,2026-09-09
+attendance,TST-REC-00128,EMP-0223,Omar Karim,Sales & Marketing,omar.karim.223@example.test,Active,2026-09-16,,,,,,,,,,2026-09-16T09:00:00+08:00,2026-09-16T18:00:00+08:00,Approved,2026-09-16
+attendance,TST-REC-00129,EMP-0259,Tariq Das,Information Technology,tariq.das.259@example.test,Active,2026-08-05,,,,,,,,,,2026-08-05T09:00:00+08:00,2026-08-05T18:00:00+08:00,Approved,2026-08-05
+attendance,TST-REC-00130,EMP-0320,Priya Lim,Operations,priya.lim.320@example.test,Active,2026-10-06,,,,,,,,,,2026-10-06T09:00:00+08:00,2026-10-06T18:00:00+08:00,Approved,2026-10-08
+employee,TST-REC-00131,EMP-0264,Hakim Lee,Information Technology,hakim.lee.264@example.test,Active,2026-09-21,,,,,,,,,,,,Pending,2026-09-24
+claim,TST-REC-00132,EMP-0248,Hakim Das,Sales & Marketing,hakim.das.248@example.test,Active,2026-09-02,TST-CLM-00132,Transport,9999,Client meeting taxi fare,,,,,,,,Submitted,2026-09-02
+claim,TST-REC-00133,EMP-0312,Hakim Lim,Finance,hakim.lim.312@example.test,Active,2026-10-12,TST-CLM-00133,Parking,354,Office parking reimbursement,,,,,,,,Approved,2026-10-12
+claim,TST-REC-00134,EMP-0353,Rafiq Hassan,Sales & Marketing,rafiq.hassan.353@example.test,Active,2026-10-19,TST-CLM-00134,Travel,368,Team lunch allowance,,,,,,,,Pending,2026-10-20
+claim,TST-REC-00135,EMP-0251,Kavya Das,Human Resources,kavya.das.251@example.test,Active,2026-08-08,TST-CLM-00135,Parking,397,Office parking reimbursement,,,,,,,,Submitted,2026-08-10
+leave,TST-REC-00136,EMP-0116,Wei Rahman,Human Resources,wei.rahman.116@example.test,Active,2026-09-15,,,,,TST-LEV-00136,Medical,2026-09-15,2026-09-18,4,,,Approved,2026-09-16
+leave,TST-REC-00137,EMP-0102,Arif Rahman,Finance,arif.rahman.102@example.test,Active,2026-08-16,,,,,TST-LEV-00137,Annual,2026-08-16,2026-08-19,4,,,Pending,2026-08-16
+attendance,TST-REC-00138,EMP-0217,Iman Karim,Finance,iman.karim.217@example.test,Active,2026-09-04,,,,,,,,,,2026-09-04T09:00:00+08:00,2026-09-04T18:00:00+08:00,Approved,2026-09-07
+attendance,TST-REC-00139,EMP-0200,Hakim Wong,Operations,hakim.wong.200@example.test,Active,2026-08-14,,,,,,,,,,2026-08-14T09:00:00+08:00,2026-08-14T18:00:00+08:00,Pending,2026-08-14
+attendance,TST-REC-00140,EMP-0355,Tariq Hassan,Operations,tariq.hassan.355@example.test,Active,2026-09-21,,,,,,,,,,2026-09-21T09:00:00+08:00,2026-09-21T18:00:00+08:00,Pending,2026-09-23
+employee,TST-REC-00141,EMP-0167,Dania Nair,Finance,dania.nair.167@example.test,Active,2026-08-27,,,,,,,,,,,,Pending,2026-08-28
+claim,TST-REC-00142,EMP-0107,Kavya Rahman,Finance,kavya.rahman.107@example.test,Active,2026-09-17,TST-CLM-00142,Transport,234,Client meeting taxi fare,,,,,,,,Submitted,2026-09-20
+claim,TST-REC-00143,EMP-0153,Iman Hassan,Sales & Marketing,iman.hassan.153@example.test,Active,2026-08-03,TST-CLM-00143,Transport,409,Client meeting taxi fare,,,,,,,,Pending,2026-08-06
+claim,TST-REC-00144,EMP-0124,Lina Lim,Information Technology,lina.lim.124@example.test,Active,2026-08-21,TST-CLM-00144,Travel,80,Team lunch allowance,,,,,,,,Pending,2026-08-23
+claim,TST-REC-00145,EMP-0133,Aina Tan,Sales & Marketing,aina.tan.133@example.test,Active,2026-09-03,TST-CLM-00145,Parking,312,Office parking reimbursement,,,,,,,,Submitted,2026-09-05
+leave,TST-REC-00146,EMP-0356,Wei Hassan,Human Resources,wei.hassan.356@example.test,Active,2026-10-14,,,,,TST-LEV-00146,Emergency,2026-10-14,2026-10-15,2,,,Pending,2026-10-14
+leave,TST-REC-00147,EMP-0242,Sofia Yusof,Finance,sofia.yusof.242@example.test,Active,2026-08-14,,,,,TST-LEV-00147,Emergency,2026-08-14,2026-08-14,1,,,Pending,2026-08-14
+attendance,TST-REC-00148,EMP-0266,Jia Lee,Human Resources,jia.lee.266@example.test,Active,2026-09-01,,,,,,,,,,2026-09-01T09:00:00+08:00,2026-09-01T18:00:00+08:00,Approved,2026-09-04
+attendance,TST-REC-00149,EMP-0291,Tariq Abdullah,Human Resources,tariq.abdullah.291@example.test,Active,2026-08-02,,,,,,,,,,2026-08-02T09:00:00+08:00,2026-08-02T18:00:00+08:00,Submitted,2026-08-02
+attendance,TST-REC-00150,EMP-0298,Jia Rahman,Sales & Marketing,jia.rahman.298@example.test,Active,2026-09-23,,,,,,,,,,2026-09-23T09:00:00+08:00,2026-09-23T18:00:00+08:00,Pending,2026-09-23
+employee,TST-REC-00151,EMP-0219,Kavya Karim,Information Technology,kavya.karim.219@example.test,Active,2026-10-04,,,,,,,,,,,,Approved,2026-10-04
+claim,TST-REC-00152,EMP-0156,Lina Hassan,Human Resources,lina.hassan.156@example.test,Active,2026-10-17,TST-CLM-00152,Travel,45,Team lunch allowance,,,,,,,,Pending,2026-10-19
+claim,TST-REC-00153,EMP-0136,Hakim Tan,Human Resources,hakim.tan.136@example.test,Active,2026-08-12,TST-CLM-00153,Meal,91,Travel to branch meeting,,,,,,,,Submitted,2026-08-12
+claim,TST-REC-00154,EMP-0273,Rafiq Lee,Sales & Marketing,rafiq.lee.273@example.test,Active,2026-09-15,TST-CLM-00154,Travel,277,Team lunch allowance,,,,,,,,Pending,2026-09-15
+claim,TST-REC-00155,EMP-0219,Kavya Karim,Information Technology,kavya.karim.219@example.test,Active,2026-08-02,TST-CLM-00155,Office supplies,243,Stationery and supplies,,,,,,,,Submitted,2026-08-05
+leave,TST-REC-00156,EMP-0154,Jia Hassan,Information Technology,jia.hassan.154@example.test,Active,2026-08-13,,,,,TST-LEV-00156,Compassionate,2026-08-13,2026-08-13,1,,,Submitted,2026-08-15
+leave,TST-REC-00157,EMP-0243,Tariq Yusof,Sales & Marketing,tariq.yusof.243@example.test,Active,2026-09-04,,,,,TST-LEV-00157,Emergency,2026-09-04,2026-09-04,1,,,Approved,2026-09-07
+attendance,TST-REC-00158,EMP-0323,Tariq Lim,Sales & Marketing,tariq.lim.323@example.test,Active,2026-09-20,,,,,,,,,,2026-09-20T09:00:00+08:00,2026-09-20T18:00:00+08:00,Submitted,2026-09-21
+attendance,TST-REC-00159,EMP-0179,Tariq Nair,Information Technology,tariq.nair.179@example.test,Active,2026-10-15,,,,,,,,,,2026-10-15T09:00:00+08:00,2026-10-15T18:00:00+08:00,Approved,2026-10-16
+attendance,TST-REC-00160,EMP-0282,Jia Abdullah,Finance,jia.abdullah.282@example.test,Active,2026-10-10,,,,,,,,,,2026-10-10T09:00:00+08:00,2026-10-10T18:00:00+08:00,Approved,2026-10-11
+employee,TST-REC-00161,EMP-0333,Mika Tan,Sales & Marketing,mika.tan.333@example.test,Active,2026-08-13,,,,,,,,,,,,Approved,2026-08-14
+claim,TST-REC-00162,EMP-0310,Arif Lim,Operations,arif.lim.310@example.test,Active,2026-10-17,TST-CLM-00162,Transport,220,Client meeting taxi fare,,,,,,,,Approved,2026-10-18
+claim,TST-REC-00163,EMP-0359,Dania Nair,Information Technology,dania.nair.359@example.test,Active,2026-09-11,TST-CLM-00163,Office supplies,81,Stationery and supplies,,,,,,,,Pending,2026-09-13
+claim,TST-REC-00164,EMP-0161,Rafiq Hassan,Human Resources,rafiq.hassan.161@example.test,Active,2026-09-10,TST-CLM-00164,Office supplies,64,Stationery and supplies,,,,,,,,Approved,2026-09-11
+claim,TST-REC-00165,EMP-0355,Tariq Hassan,Operations,tariq.hassan.355@example.test,Active,2026-09-16,TST-CLM-00165,Training,102,Approved training fee,,,,,,,,Submitted,2026-09-16
+leave,TST-REC-00166,EMP-0297,Iman Rahman,Finance,iman.rahman.297@example.test,Active,2026-09-08,,,,,TST-LEV-00166,Emergency,2026-09-08,2026-09-11,4,,,Pending,2026-09-08
+leave,TST-REC-00167,EMP-0351,Omar Hassan,Human Resources,omar.hassan.351@example.test,Active,2026-10-16,,,,,TST-LEV-00167,Medical,2026-10-16,2026-10-16,1,,,Approved,2026-10-19
+attendance,TST-REC-00168,EMP-0294,Arif Rahman,Information Technology,arif.rahman.294@example.test,Active,2026-08-06,,,,,,,,,,2026-08-06T09:00:00+08:00,2026-08-06T18:00:00+08:00,Pending,2026-08-09
+attendance,TST-REC-00169,EMP-0272,Priya Lee,Finance,priya.lee.272@example.test,Active,2026-09-04,,,,,,,,,,2026-09-04T09:00:00+08:00,2026-09-04T18:00:00+08:00,Pending,2026-09-07
+attendance,TST-REC-00170,EMP-0142,Nadia Tan,Finance,nadia.tan.142@example.test,Active,2026-09-20,,,,,,,,,,2026-09-20T09:00:00+08:00,2026-09-20T18:00:00+08:00,Submitted,2026-09-22
+employee,TST-REC-00171,EMP-0339,Tariq Tan,Information Technology,tariq.tan.339@example.test,Active,2026-09-08,,,,,,,,,,,,Approved,2026-09-10
+claim,TST-REC-00172,EMP-0199,Dania Wong,Information Technology,dania.wong.199@example.test,Active,2026-09-16,TST-CLM-00172,Office supplies,268,Stationery and supplies,,,,,,,,Approved,2026-09-16
+claim,TST-REC-00173,EMP-0242,Sofia Yusof,Finance,sofia.yusof.242@example.test,Active,2026-09-23,TST-CLM-00173,Meal,404,Travel to branch meeting,,,,,,,,Approved,2026-09-26
+claim,TST-REC-00174,EMP-0121,Iman Lim,Human Resources,iman.lim.121@example.test,Active,2026-09-14,TST-CLM-00174,Travel,173,Team lunch allowance,,,,,,,,Approved,2026-09-15
+claim,TST-REC-00175,EMP-0187,Kavya Ismail,Finance,kavya.ismail.187@example.test,Active,2026-08-11,TST-CLM-00175,Transport,163,Client meeting taxi fare,,,,,,,,Approved,2026-08-12
+leave,TST-REC-00176,EMP-0293,Aina Rahman,Sales & Marketing,aina.rahman.293@example.test,Active,2026-08-06,,,,,TST-LEV-00176,Medical,2026-08-06,2026-08-04,3,,,Pending,2026-08-07
+leave,TST-REC-00177,EMP-0233,Iman Yusof,Sales & Marketing,iman.yusof.233@example.test,Active,2026-10-12,,,,,TST-LEV-00177,Medical,2026-10-12,2026-10-15,4,,,Approved,2026-10-12
+attendance,TST-REC-00178,EMP-0298,Jia Rahman,Sales & Marketing,jia.rahman.298@example.test,Active,2026-08-04,,,,,,,,,,2026-08-04T09:00:00+08:00,2026-08-04T18:00:00+08:00,Approved,2026-08-04
+attendance,TST-REC-00179,EMP-0251,Kavya Das,Human Resources,kavya.das.251@example.test,Active,2026-09-21,,,,,,,,,,2026-09-21T09:00:00+08:00,2026-09-21T18:00:00+08:00,Approved,2026-09-21
+attendance,TST-REC-00180,EMP-0127,Omar Lim,Finance,omar.lim.127@example.test,Active,2026-10-07,,,,,,,,,,2026-10-07T09:00:00+08:00,2026-10-07T18:00:00+08:00,Pending,2026-10-08
+employee,TST-REC-00181,EMP-0143,Omar Tan,Sales & Marketing,omar.tan.143@example.test,Active,2026-09-27,,,,,,,,,,,,Approved,2026-09-30
+claim,TST-REC-00182,EMP-0276,Wei Lee,Human Resources,wei.lee.276@example.test,Active,2026-08-08,TST-CLM-00182,Meal,59,Travel to branch meeting,,,,,,,,Approved,2026-08-11
+claim,TST-REC-00183,EMP-0137,Iman Tan,Finance,iman.tan.137@example.test,Active,2026-08-22,TST-CLM-00183,Training,405,Approved training fee,,,,,,,,Pending,2026-08-23
+claim,TST-REC-00184,EMP-0278,Arif Abdullah,Sales & Marketing,arif.abdullah.278@example.test,Active,2026-10-23,TST-CLM-00184,Transport,260,Client meeting taxi fare,,,,,,,,Approved,2026-10-25
+claim,TST-REC-00185,EMP-0290,Sofia Abdullah,Operations,sofia.abdullah.290@example.test,Active,2026-10-23,TST-CLM-00185,Parking,320,Office parking reimbursement,,,,,,,,Submitted,2026-10-25
+leave,TST-REC-00186,EMP-0165,Aina Nair,Operations,aina.nair.165@example.test,Active,2026-08-13,,,,,TST-LEV-00186,Emergency,2026-08-13,2026-08-15,3,,,Approved,2026-08-14
+leave,TST-REC-00187,EMP-0244,Wei Yusof,Information Technology,wei.yusof.244@example.test,Active,2026-10-08,,,,,TST-LEV-00187,Medical,2026-10-08,2026-10-11,4,,,Pending,2026-10-09
+attendance,TST-REC-00188,EMP-0319,Omar Lim,Information Technology,omar.lim.319@example.test,Active,2026-09-20,,,,,,,,,,2026-09-20T09:00:00+08:00,2026-09-20T18:00:00+08:00,Approved,2026-09-20
+attendance,TST-REC-00189,EMP-0353,Rafiq Hassan,Sales & Marketing,rafiq.hassan.353@example.test,Active,2026-10-19,,,,,,,,,,2026-10-19T09:00:00+08:00,2026-10-19T18:00:00+08:00,Approved,2026-10-22
+attendance,TST-REC-00190,EMP-0227,Tariq Karim,Finance,tariq.karim.227@example.test,Active,2026-09-01,,,,,,,,,,2026-09-01T09:00:00+08:00,2026-09-01T18:00:00+08:00,Approved,2026-09-03
+employee,TST-REC-00191,EMP-0214,Arif Karim,Information Technology,arif.karim.214@example.test,Active,2026-09-12,,,,,,,,,,,,Submitted,2026-09-15
+claim,TST-REC-00192,EMP-0244,Wei Yusof,Information Technology,wei.yusof.244@example.test,Active,2026-09-15,TST-CLM-00192,Office supplies,245,Stationery and supplies,,,,,,,,Pending,2026-09-17
+claim,TST-REC-00193,EMP-0290,Sofia Abdullah,Operations,sofia.abdullah.290@example.test,Active,2026-08-12,TST-CLM-00193,Travel,272,Team lunch allowance,,,,,,,,Pending,2026-08-15
+claim,TST-REC-00194,EMP-0334,Nadia Tan,Information Technology,nadia.tan.334@example.test,Active,2026-08-14,TST-CLM-00194,Parking,403,Office parking reimbursement,,,,,,,,Approved,2026-08-15
+claim,TST-REC-00195,EMP-0270,Nadia Lee,Operations,nadia.lee.270@example.test,Active,2026-09-02,TST-CLM-00195,Parking,203,Office parking reimbursement,,,,,,,,Approved,2026-09-03
+leave,TST-REC-00196,EMP-0297,Iman Rahman,Finance,iman.rahman.297@example.test,Active,2026-09-08,,,,,TST-LEV-00196,Annual,2026-09-08,2026-09-11,4,,,Pending,2026-09-10
+leave,TST-REC-00197,EMP-0356,Wei Hassan,Human Resources,wei.hassan.356@example.test,Active,2026-08-16,,,,,TST-LEV-00197,Compassionate,2026-08-16,2026-08-17,2,,,Pending,2026-08-18
+attendance,TST-REC-00198,EMP-0205,Mika Wong,Operations,mika.wong.205@example.test,Active,2026-10-03,,,,,,,,,,2026-10-03T09:00:00+08:00,2026-10-03T18:00:00+08:00,Pending,2026-10-05
+attendance,TST-REC-00199,EMP-0197,Aina Wong,Finance,aina.wong.197@example.test,Active,2026-09-03,,,,,,,,,,2026-09-03T09:00:00+08:00,2026-09-03T18:00:00+08:00,Submitted,2026-09-06
+attendance,TST-REC-00200,EMP-0202,Jia Wong,Finance,jia.wong.202@example.test,Active,2026-08-04,,,,,,,,,,2026-08-04T09:00:00+08:00,2026-08-04T18:00:00+08:00,Pending,2026-08-06
+employee,TST-REC-00201,EMP-0344,Hakim Hassan,Information Technology,hakim.hassan.344@example.test,Active,2026-09-09,,,,,,,,,,,,Approved,2026-09-10
+claim,TST-REC-00202,EMP-0182,Arif Ismail,Finance,arif.ismail.182@example.test,Active,2026-08-26,TST-CLM-00202,Transport,156,Client meeting taxi fare,,,,,,,,Pending,2026-08-29
+claim,TST-REC-00203,EMP-0355,Tariq Hassan,Operations,tariq.hassan.355@example.test,Active,2026-08-01,TST-CLM-00203,Parking,211,Office parking reimbursement,,,,,,,,Approved,2026-08-02
+claim,TST-REC-00204,EMP-0177,Rafiq Nair,Finance,rafiq.nair.177@example.test,Active,2026-09-14,TST-CLM-00204,Meal,404,Travel to branch meeting,,,,,,,,Pending,2026-09-14
+claim,TST-REC-00205,EMP-0339,Tariq Tan,Information Technology,tariq.tan.339@example.test,Active,2026-09-13,TST-CLM-00205,Transport,128,Client meeting taxi fare,,,,,,,,Submitted,2026-09-14
+leave,TST-REC-00206,EMP-0211,Tariq Wong,Human Resources,tariq.wong.211@example.test,Active,2026-08-18,,,,,TST-LEV-00206,Emergency,2026-08-18,2026-08-19,2,,,Pending,2026-08-19
+leave,TST-REC-00207,EMP-0139,Kavya Tan,Information Technology,kavya.tan.139@example.test,Active,2026-09-26,,,,,TST-LEV-00207,Medical,2026-09-26,2026-09-27,2,,,Approved,2026-09-27
+attendance,TST-REC-00208,EMP-0269,Mika Lee,Information Technology,mika.lee.269@example.test,Active,2026-08-01,,,,,,,,,,2026-08-01T09:00:00+08:00,,Approved,2026-08-03
+attendance,TST-REC-00209,EMP-0107,Kavya Rahman,Finance,kavya.rahman.107@example.test,Active,2026-10-07,,,,,,,,,,2026-10-07T09:00:00+08:00,2026-10-07T18:00:00+08:00,Approved,2026-10-09
+attendance,TST-REC-00210,EMP-0150,Arif Hassan,Operations,arif.hassan.150@example.test,Active,2026-09-03,,,,,,,,,,2026-09-03T09:00:00+08:00,2026-09-03T18:00:00+08:00,Approved,2026-09-05
+employee,TST-REC-00211,EMP-0216,Hakim Karim,Human Resources,hakim.karim.216@example.test,Active,2026-09-02,,,,,,,,,,,,Pending,2026-09-04
+claim,TST-REC-00212,EMP-0266,Jia Lee,Human Resources,jia.lee.266@example.test,Active,2026-09-20,TST-CLM-00212,Meal,368,Travel to branch meeting,,,,,,,,Pending,2026-09-20
+claim,TST-REC-00213,EMP-0140,Lina Tan,Operations,lina.tan.140@example.test,Active,2026-10-16,TST-CLM-00213,Transport,334,Client meeting taxi fare,,,,,,,,Submitted,2026-10-16
+claim,TST-REC-00214,EMP-0162,Sofia Hassan,Finance,sofia.hassan.162@example.test,Active,2026-09-10,TST-CLM-00214,Travel,86,Team lunch allowance,,,,,,,,Approved,2026-09-13
+claim,TST-REC-00215,EMP-0103,Dania Rahman,Sales & Marketing,dania.rahman.103@example.test,Active,2026-09-20,TST-CLM-00215,Training,386,Approved training fee,,,,,,,,Submitted,2026-09-20
+leave,TST-REC-00216,EMP-0215,Dania Karim,Operations,dania.karim.215@example.test,Active,2026-10-06,,,,,TST-LEV-00216,Annual,2026-10-06,2026-10-09,4,,,Approved,2026-10-09
+leave,TST-REC-00217,EMP-0184,Hakim Ismail,Information Technology,hakim.ismail.184@example.test,Active,2026-08-27,,,,,TST-LEV-00217,Annual,2026-08-27,2026-08-27,1,,,Submitted,2026-08-28
+attendance,TST-REC-00218,EMP-0300,Lina Rahman,Operations,lina.rahman.300@example.test,Active,2026-09-17,,,,,,,,,,2026-09-17T09:00:00+08:00,2026-09-17T18:00:00+08:00,Pending,2026-09-20
+attendance,TST-REC-00219,EMP-0210,Sofia Wong,Operations,sofia.wong.210@example.test,Active,2026-08-02,,,,,,,,,,2026-08-02T09:00:00+08:00,2026-08-02T18:00:00+08:00,Approved,2026-08-05
+attendance,TST-REC-00220,EMP-0108,Lina Rahman,Sales & Marketing,lina.rahman.108@example.test,Active,2026-10-22,,,,,,,,,,2026-10-22T09:00:00+08:00,2026-10-22T18:00:00+08:00,Approved,2026-10-25
+employee,TST-REC-00221,EMP-0151,Dania Hassan,Human Resources,dania.hassan.151@example.test,Active,2026-08-05,,,,,,,,,,,,Pending,2026-08-08
+claim,TST-REC-00222,EMP-0219,Kavya Karim,Information Technology,kavya.karim.219@example.test,Active,2026-08-23,TST-CLM-00222,Transport,71,Client meeting taxi fare,,,,,,,,Approved,2026-08-26
+claim,TST-REC-00223,EMP-0116,Wei Rahman,Human Resources,wei.rahman.116@example.test,Active,2026-08-07,TST-CLM-00223,Meal,252,Travel to branch meeting,,,,,,,,Submitted,2026-08-07
+claim,TST-REC-00224,EMP-0239,Omar Yusof,Information Technology,omar.yusof.239@example.test,Active,2026-10-07,TST-CLM-00224,Parking,82,Office parking reimbursement,,,,,,,,Approved,2026-10-07
+claim,TST-REC-00225,EMP-0170,Jia Nair,Operations,jia.nair.170@example.test,Active,2026-08-11,TST-CLM-00225,Transport,382,Client meeting taxi fare,,,,,,,,Submitted,2026-08-14
+leave,TST-REC-00226,EMP-0103,Dania Rahman,Sales & Marketing,dania.rahman.103@example.test,Active,2026-10-11,,,,,TST-LEV-00226,Annual,2026-10-11,2026-10-13,3,,,Pending,2026-10-11
+leave,TST-REC-00227,EMP-0219,Kavya Karim,Information Technology,kavya.karim.219@example.test,Active,2026-10-07,,,,,TST-LEV-00227,Annual,2026-10-07,2026-10-08,2,,,Approved,2026-10-09
+attendance,TST-REC-00228,EMP-0179,Tariq Nair,Information Technology,tariq.nair.179@example.test,Active,2026-09-02,,,,,,,,,,2026-09-02T09:00:00+08:00,2026-09-02T18:00:00+08:00,Submitted,2026-09-05
+attendance,TST-REC-00229,EMP-0227,Tariq Karim,Finance,tariq.karim.227@example.test,Active,2026-09-11,,,,,,,,,,2026-09-11T09:00:00+08:00,2026-09-11T18:00:00+08:00,Approved,2026-09-11
+attendance,TST-REC-00230,EMP-0336,Priya Tan,Human Resources,priya.tan.336@example.test,Active,2026-10-19,,,,,,,,,,2026-10-19T09:00:00+08:00,2026-10-19T18:00:00+08:00,Submitted,2026-10-19
+employee,TST-REC-00231,EMP-0300,Lina Rahman,Operations,lina.rahman.300@example.test,Active,2026-10-20,,,,,,,,,,,,Approved,2026-10-21
+claim,TST-REC-00232,EMP-0290,Sofia Abdullah,Operations,sofia.abdullah.290@example.test,Active,2026-09-14,TST-CLM-00232,Meal,115,Travel to branch meeting,,,,,,,,Submitted,2026-09-15
+claim,TST-REC-00233,EMP-0165,Aina Nair,Operations,aina.nair.165@example.test,Active,2026-08-22,TST-CLM-00233,Meal,118,Travel to branch meeting,,,,,,,,Pending,2026-08-24
+claim,TST-REC-00234,EMP-0339,Tariq Tan,Information Technology,tariq.tan.339@example.test,Active,2026-09-26,TST-CLM-00234,Parking,170,Office parking reimbursement,,,,,,,,Approved,2026-09-28
+claim,TST-REC-00235,EMP-0214,Arif Karim,Information Technology,arif.karim.214@example.test,Active,2026-09-14,TST-CLM-00235,Travel,332,Team lunch allowance,,,,,,,,Submitted,2026-09-14
+leave,TST-REC-00236,EMP-0351,Omar Hassan,Human Resources,omar.hassan.351@example.test,Active,2026-09-26,,,,,TST-LEV-00236,Annual,2026-09-26,2026-09-26,1,,,Approved,2026-09-27
+leave,TST-REC-00237,EMP-0358,Arif Nair,Sales & Marketing,arif.nair.358@example.test,Active,2026-09-12,,,,,TST-LEV-00237,Emergency,2026-09-12,2026-09-13,2,,,Pending,2026-09-15
+attendance,TST-REC-00238,EMP-0148,Wei Tan,Sales & Marketing,wei.tan.148@example.test,Active,2026-10-05,,,,,,,,,,2026-10-05T09:00:00+08:00,2026-10-05T18:00:00+08:00,Pending,2026-10-06
+attendance,TST-REC-00239,EMP-0155,Kavya Hassan,Operations,kavya.hassan.155@example.test,Active,2026-09-20,,,,,,,,,,2026-09-20T09:00:00+08:00,2026-09-20T18:00:00+08:00,Submitted,2026-09-23
+attendance,TST-REC-00240,EMP-0232,Hakim Yusof,Finance,hakim.yusof.232@example.test,Active,2026-10-08,,,,,,,,,,2026-10-08T09:00:00+08:00,2026-10-08T18:00:00+08:00,Pending,2026-10-10
+employee,TST-REC-00241,EMP-0155,Kavya Hassan,Operations,kavya.hassan.155@example.test,Active,2026-09-25,,,,,,,,,,,,Submitted,2026-09-26
+claim,TST-REC-00242,EMP-0222,Nadia Karim,Finance,nadia.karim.222@example.test,Active,2026-08-01,TST-CLM-00242,Office supplies,273,Stationery and supplies,,,,,,,,Submitted,2026-08-02
+claim,TST-REC-00243,EMP-0147,Tariq Tan,Finance,tariq.tan.147@example.test,Active,2026-09-06,TST-CLM-00243,Training,88,Approved training fee,,,,,,,,Approved,2026-09-06
+claim,TST-REC-00244,EMP-0159,Omar Hassan,Information Technology,omar.hassan.159@example.test,Active,2026-10-03,TST-CLM-00244,Training,137,Approved training fee,,,,,,,,Pending,2026-10-03
+claim,TST-REC-00245,EMP-0172,Lina Nair,Finance,lina.nair.172@example.test,Active,2026-10-10,TST-CLM-00245,Meal,103,Travel to branch meeting,,,,,,,,Approved,2026-10-13
+leave,TST-REC-00246,EMP-0304,Priya Rahman,Information Technology,priya.rahman.304@example.test,Active,2026-08-24,,,,,TST-LEV-00246,Compassionate,2026-08-24,2026-08-24,1,,,Pending,2026-08-26
+leave,TST-REC-00247,EMP-0110,Nadia Rahman,Operations,nadia.rahman.110@example.test,Active,2026-08-24,,,,,TST-LEV-00247,Emergency,2026-08-24,2026-08-25,2,,,Approved,2026-08-25
+attendance,TST-REC-00248,EMP-0179,Tariq Nair,Information Technology,tariq.nair.179@example.test,Active,2026-09-14,,,,,,,,,,2026-09-14T09:00:00+08:00,2026-09-14T18:00:00+08:00,Pending,2026-09-15
+attendance,TST-REC-00249,EMP-0234,Jia Yusof,Information Technology,jia.yusof.234@example.test,Active,2026-08-01,,,,,,,,,,2026-08-01T09:00:00+08:00,2026-08-01T18:00:00+08:00,Approved,2026-08-02
+attendance,TST-REC-00250,EMP-0133,Aina Tan,Sales & Marketing,aina.tan.133@example.test,Active,2026-09-24,,,,,,,,,,2026-09-24T09:00:00+08:00,2026-09-24T18:00:00+08:00,Pending,2026-09-27
+employee,TST-REC-00251,EMP-0232,Hakim Yusof,Finance,not-an-email,Active,2026-10-27,,,,,,,,,,,,Submitted,2026-10-28
+claim,TST-REC-00252,EMP-0232,Hakim Yusof,Finance,hakim.yusof.232@example.test,Active,2026-09-07,TST-CLM-00252,Office supplies,398,Stationery and supplies,,,,,,,,Pending,2026-09-07
+claim,TST-REC-00253,EMP-0235,Kavya Yusof,Operations,kavya.yusof.235@example.test,Active,2026-10-24,TST-CLM-00253,Office supplies,154,Stationery and supplies,,,,,,,,Approved,2026-10-27
+claim,TST-REC-00254,EMP-0165,Aina Nair,Operations,aina.nair.165@example.test,Active,2026-09-12,TST-CLM-00254,Meal,173,Travel to branch meeting,,,,,,,,Pending,2026-09-15
+claim,TST-REC-00255,EMP-0139,Kavya Tan,Information Technology,kavya.tan.139@example.test,Active,2026-08-10,TST-CLM-00255,Transport,334,Client meeting taxi fare,,,,,,,,Approved,2026-08-13
+leave,TST-REC-00256,EMP-0356,Wei Hassan,Human Resources,wei.hassan.356@example.test,Active,2026-10-25,,,,,TST-LEV-00256,Medical,2026-10-25,2026-10-28,4,,,Submitted,2026-10-28
+leave,TST-REC-00257,EMP-0102,Arif Rahman,Finance,arif.rahman.102@example.test,Active,2026-08-25,,,,,TST-LEV-00257,Annual,2026-08-25,2026-08-27,3,,,Submitted,2026-08-25
+attendance,TST-REC-00258,EMP-0219,Kavya Karim,Information Technology,kavya.karim.219@example.test,Active,2026-09-20,,,,,,,,,,2026-09-20T09:00:00+08:00,2026-09-20T18:00:00+08:00,Pending,2026-09-20
+attendance,TST-REC-00259,EMP-0279,Dania Abdullah,Information Technology,dania.abdullah.279@example.test,Active,2026-10-18,,,,,,,,,,2026-10-18T09:00:00+08:00,2026-10-18T18:00:00+08:00,Approved,2026-10-18
+attendance,TST-REC-00260,EMP-0326,Arif Tan,Human Resources,arif.tan.326@example.test,Active,2026-08-21,,,,,,,,,,2026-08-21T09:00:00+08:00,2026-08-21T18:00:00+08:00,Approved,2026-08-21
+employee,TST-REC-00261,EMP-0207,Omar Wong,Finance,omar.wong.207@example.test,Active,2026-09-01,,,,,,,,,,,,Submitted,2026-09-01
+claim,TST-REC-00262,EMP-0184,Hakim Ismail,Information Technology,hakim.ismail.184@example.test,Active,2026-08-20,TST-CLM-00262,Office supplies,164,Stationery and supplies,,,,,,,,Pending,2026-08-21
+claim,TST-REC-00263,EMP-0270,Nadia Lee,Operations,nadia.lee.270@example.test,Active,2026-10-23,TST-CLM-00263,Travel,93,Team lunch allowance,,,,,,,,Approved,2026-10-23
+claim,TST-REC-00264,EMP-0203,Kavya Wong,Sales & Marketing,kavya.wong.203@example.test,Active,2026-09-25,TST-CLM-00264,Office supplies,245,Stationery and supplies,,,,,,,,Approved,2026-09-26
+claim,TST-REC-00265,EMP-0259,Tariq Das,Information Technology,tariq.das.259@example.test,Active,2026-10-05,TST-CLM-00265,Parking,60,Office parking reimbursement,,,,,,,,Approved,2026-10-05
+leave,TST-REC-00266,EMP-0205,Mika Wong,Operations,mika.wong.205@example.test,Active,2026-08-09,,,,,TST-LEV-00266,Emergency,2026-08-09,2026-08-11,3,,,Approved,2026-08-12
+leave,TST-REC-00267,EMP-0339,Tariq Tan,Information Technology,tariq.tan.339@example.test,Active,2026-09-04,,,,,TST-LEV-00267,Compassionate,2026-09-04,2026-09-06,3,,,Approved,2026-09-06
+attendance,TST-REC-00268,EMP-0312,Hakim Lim,Finance,hakim.lim.312@example.test,Active,2026-08-02,,,,,,,,,,2026-08-02T09:00:00+08:00,2026-08-02T18:00:00+08:00,Submitted,2026-08-03
+attendance,TST-REC-00269,EMP-0238,Nadia Yusof,Sales & Marketing,nadia.yusof.238@example.test,Active,2026-08-16,,,,,,,,,,2026-08-16T09:00:00+08:00,2026-08-16T18:00:00+08:00,Approved,2026-08-18
+attendance,TST-REC-00270,EMP-0337,Rafiq Tan,Finance,rafiq.tan.337@example.test,Active,2026-08-03,,,,,,,,,,2026-08-03T09:00:00+08:00,2026-08-03T18:00:00+08:00,Submitted,2026-08-04
+employee,TST-REC-00271,EMP-0168,Hakim Nair,Sales & Marketing,hakim.nair.168@example.test,Active,2026-08-15,,,,,,,,,,,,Pending,2026-08-18
+claim,TST-REC-00272,EMP-0132,Wei Lim,Finance,wei.lim.132@example.test,Active,2026-08-06,TST-CLM-00272,Office supplies,48,Stationery and supplies,,,,,,,,Approved,2026-08-07
+claim,TST-REC-00273,EMP-0275,Tariq Lee,Operations,tariq.lee.275@example.test,Active,2026-10-22,TST-CLM-00273,Travel,282,Team lunch allowance,,,,,,,,Submitted,2026-10-24
+claim,TST-REC-00274,EMP-0168,Hakim Nair,Sales & Marketing,hakim.nair.168@example.test,Active,2026-10-05,TST-CLM-00274,Training,95,Approved training fee,,,,,,,,Pending,2026-10-07
+claim,TST-REC-00275,EMP-0242,Sofia Yusof,Finance,sofia.yusof.242@example.test,Active,2026-10-20,TST-CLM-00275,Meal,220,Travel to branch meeting,,,,,,,,Approved,2026-10-21
+leave,TST-REC-00276,EMP-0349,Mika Hassan,Information Technology,mika.hassan.349@example.test,Active,2026-09-20,,,,,TST-LEV-00276,Annual,2026-09-20,2026-09-22,3,,,Approved,2026-09-21
+leave,TST-REC-00277,EMP-0219,Kavya Karim,Information Technology,kavya.karim.219@example.test,Active,2026-08-21,,,,,TST-LEV-00277,Emergency,2026-08-21,2026-08-23,3,,,Approved,2026-08-24
+attendance,TST-REC-00278,EMP-0109,Mika Rahman,Information Technology,mika.rahman.109@example.test,Active,2026-08-04,,,,,,,,,,2026-08-04T09:00:00+08:00,2026-08-04T18:00:00+08:00,Pending,2026-08-05
+attendance,TST-REC-00279,EMP-0159,Omar Hassan,Information Technology,omar.hassan.159@example.test,Active,2026-08-18,,,,,,,,,,2026-08-18T09:00:00+08:00,2026-08-18T18:00:00+08:00,Pending,2026-08-21
+attendance,TST-REC-00280,EMP-0324,Wei Lim,Information Technology,wei.lim.324@example.test,Active,2026-09-01,,,,,,,,,,2026-09-01T09:00:00+08:00,2026-09-01T18:00:00+08:00,Approved,2026-09-01
+employee,TST-REC-00281,EMP-0183,Dania Ismail,Sales & Marketing,dania.ismail.183@example.test,Active,2026-08-08,,,,,,,,,,,,Submitted,2026-08-11
+claim,TST-REC-00282,EMP-0102,Arif Rahman,Finance,arif.rahman.102@example.test,Active,2026-09-01,TST-CLM-00282,Office supplies,240,Stationery and supplies,,,,,,,,Approved,2026-09-01
+claim,TST-REC-00283,EMP-0228,Wei Karim,Sales & Marketing,wei.karim.228@example.test,Active,2026-10-23,TST-CLM-00283,Parking,123,Office parking reimbursement,,,,,,,,Approved,2026-10-24
+claim,TST-REC-00284,EMP-0182,Arif Ismail,Finance,arif.ismail.182@example.test,Active,2026-09-20,TST-CLM-00284,Training,170,Approved training fee,,,,,,,,Approved,2026-09-22
+claim,TST-REC-00285,EMP-0306,Sofia Rahman,Human Resources,sofia.rahman.306@example.test,Active,2026-09-15,TST-CLM-00285,Travel,54,Team lunch allowance,,,,,,,,Approved,2026-09-17
+leave,TST-REC-00286,EMP-0136,Hakim Tan,Human Resources,hakim.tan.136@example.test,Active,2026-09-09,,,,,TST-LEV-00286,Emergency,2026-09-09,2026-09-10,2,,,Submitted,2026-09-09
+leave,TST-REC-00287,EMP-0280,Hakim Abdullah,Operations,hakim.abdullah.280@example.test,Active,2026-10-20,,,,,TST-LEV-00287,Annual,2026-10-20,2026-10-22,3,,,Pending,2026-10-21
+attendance,TST-REC-00288,EMP-0306,Sofia Rahman,Human Resources,sofia.rahman.306@example.test,Active,2026-10-23,,,,,,,,,,2026-10-23T09:00:00+08:00,2026-10-23T18:00:00+08:00,Approved,2026-10-26
+attendance,TST-REC-00289,EMP-0313,Iman Lim,Sales & Marketing,iman.lim.313@example.test,Active,2026-10-08,,,,,,,,,,2026-10-08T09:00:00+08:00,2026-10-08T18:00:00+08:00,Approved,2026-10-10
+attendance,TST-REC-00290,EMP-0213,Aina Karim,Sales & Marketing,aina.karim.213@example.test,Active,2026-09-20,,,,,,,,,,2026-09-20T09:00:00+08:00,2026-09-20T18:00:00+08:00,Approved,2026-09-22
+employee,TST-REC-00291,EMP-0320,Priya Lim,Operations,priya.lim.320@example.test,Active,2026-10-22,,,,,,,,,,,,Approved,2026-10-24
+claim,TST-REC-00292,EMP-0303,Omar Rahman,Sales & Marketing,omar.rahman.303@example.test,Active,2026-08-27,TST-CLM-00292,Training,363,Approved training fee,,,,,,,,Pending,2026-08-27
+claim,TST-REC-00293,EMP-0143,Omar Tan,Sales & Marketing,omar.tan.143@example.test,Active,2026-10-12,TST-CLM-00293,Parking,332,Office parking reimbursement,,,,,,,,Approved,2026-10-13
+claim,TST-REC-00294,EMP-0304,Priya Rahman,Information Technology,priya.rahman.304@example.test,Active,2026-10-26,TST-CLM-00294,Transport,251,Client meeting taxi fare,,,,,,,,Approved,2026-10-29
+claim,TST-REC-00295,EMP-0217,Iman Karim,Finance,iman.karim.217@example.test,Active,2026-09-12,TST-CLM-00295,Training,59,Approved training fee,,,,,,,,Pending,2026-09-12
+leave,TST-REC-00296,EMP-0282,Jia Abdullah,Finance,jia.abdullah.282@example.test,Active,2026-09-14,,,,,TST-LEV-00296,Emergency,2026-09-14,2026-09-16,3,,,Submitted,2026-09-15
+leave,TST-REC-00297,EMP-0258,Sofia Das,Sales & Marketing,sofia.das.258@example.test,Active,2026-10-22,,,,,TST-LEV-00297,Emergency,2026-10-22,2026-10-23,2,,,Pending,2026-10-23
+attendance,TST-REC-00298,EMP-0244,Wei Yusof,Information Technology,wei.yusof.244@example.test,Active,2026-10-21,,,,,,,,,,2026-10-21T09:00:00+08:00,2026-10-21T18:00:00+08:00,Approved,2026-10-23
+attendance,TST-REC-00299,EMP-0245,Aina Das,Operations,aina.das.245@example.test,Active,2026-10-15,,,,,,,,,,2026-10-15T09:00:00+08:00,2026-10-15T18:00:00+08:00,Pending,2026-10-18
+attendance,TST-REC-00300,EMP-0219,Kavya Karim,Information Technology,kavya.karim.219@example.test,Active,2026-09-14,,,,,,,,,,2026-09-14T09:00:00+08:00,2026-09-14T18:00:00+08:00,Pending,2026-09-17
+employee,TST-REC-00301,EMP-0209,Rafiq Wong,Information Technology,rafiq.wong.209@example.test,Active,2026-09-15,,,,,,,,,,,,Submitted,2026-09-15
+claim,TST-REC-00302,EMP-0283,Kavya Abdullah,Sales & Marketing,kavya.abdullah.283@example.test,Active,2026-10-15,TST-CLM-00302,Transport,347,Client meeting taxi fare,,,,,,,,Submitted,2026-10-17
+claim,TST-REC-00303,EMP-0226,Sofia Karim,Human Resources,sofia.karim.226@example.test,Active,2026-10-10,TST-CLM-00303,Travel,110,Team lunch allowance,,,,,,,,Pending,2026-10-11
+claim,TST-REC-00304,EMP-0174,Nadia Nair,Information Technology,nadia.nair.174@example.test,Active,2026-09-26,TST-CLM-00304,Travel,326,Team lunch allowance,,,,,,,,Submitted,2026-09-26
+claim,TST-REC-00305,EMP-0260,Wei Das,Operations,wei.das.260@example.test,Active,2026-10-02,TST-CLM-00305,Training,208,Approved training fee,,,,,,,,Pending,2026-10-05
+leave,TST-REC-00306,EMP-0354,Sofia Hassan,Information Technology,sofia.hassan.354@example.test,Active,2026-09-02,,,,,TST-LEV-00306,Medical,2026-09-02,2026-09-05,4,,,Submitted,2026-09-04
+leave,TST-REC-00307,EMP-0209,Rafiq Wong,Information Technology,rafiq.wong.209@example.test,Active,2026-10-17,,,,,TST-LEV-00307,Compassionate,2026-10-17,2026-10-18,2,,,Approved,2026-10-20
+attendance,TST-REC-00308,EMP-0245,Aina Das,Operations,aina.das.245@example.test,Active,2026-10-16,,,,,,,,,,2026-10-16T09:00:00+08:00,2026-10-16T18:00:00+08:00,Pending,2026-10-18
+attendance,TST-REC-00309,EMP-0224,Priya Karim,Information Technology,priya.karim.224@example.test,Active,2026-08-10,,,,,,,,,,2026-08-10T09:00:00+08:00,2026-08-10T18:00:00+08:00,Approved,2026-08-12
+attendance,TST-REC-00310,EMP-0200,Hakim Wong,Operations,hakim.wong.200@example.test,Active,2026-08-25,,,,,,,,,,2026-08-25T09:00:00+08:00,2026-08-25T18:00:00+08:00,Submitted,2026-08-26
+employee,TST-REC-00311,EMP-0315,Kavya Lim,Operations,kavya.lim.315@example.test,Active,2026-09-07,,,,,,,,,,,,Pending,2026-09-10
+claim,TST-REC-00312,EMP-0209,Rafiq Wong,Information Technology,rafiq.wong.209@example.test,Active,2026-09-27,TST-CLM-00312,Transport,133,Client meeting taxi fare,,,,,,,,Submitted,2026-09-30
+claim,TST-REC-00313,EMP-0289,Rafiq Abdullah,Information Technology,rafiq.abdullah.289@example.test,Active,2026-08-22,TST-CLM-00313,Office supplies,279,Stationery and supplies,,,,,,,,Pending,2026-08-24
+claim,TST-REC-00314,EMP-0317,Mika Lim,Finance,mika.lim.317@example.test,Active,2026-08-01,TST-CLM-00314,Training,308,Approved training fee,,,,,,,,Approved,2026-08-01
+claim,TST-REC-00315,EMP-0309,Aina Lim,Information Technology,aina.lim.309@example.test,Active,2026-10-20,TST-CLM-00315,Office supplies,51,Stationery and supplies,,,,,,,,Submitted,2026-10-22
+leave,TST-REC-00316,EMP-0320,Priya Lim,Unknown Division,priya.lim.320@example.test,Active,2026-09-08,,,,,TST-LEV-00316,Compassionate,2026-09-08,2026-09-09,2,,,Approved,2026-09-09
+leave,TST-REC-00317,EMP-0231,Dania Yusof,Human Resources,dania.yusof.231@example.test,Active,2026-08-12,,,,,TST-LEV-00317,Medical,2026-08-12,2026-08-15,4,,,Approved,2026-08-12
+attendance,TST-REC-00318,EMP-0287,Omar Abdullah,Finance,omar.abdullah.287@example.test,Active,2026-09-16,,,,,,,,,,2026-09-16T09:00:00+08:00,2026-09-16T18:00:00+08:00,Submitted,2026-09-16
+attendance,TST-REC-00319,EMP-0345,Iman Hassan,Operations,iman.hassan.345@example.test,Active,2026-10-20,,,,,,,,,,2026-10-20T09:00:00+08:00,2026-10-20T18:00:00+08:00,Approved,2026-10-21
+attendance,TST-REC-00320,EMP-0110,Nadia Rahman,Operations,nadia.rahman.110@example.test,Active,2026-09-03,,,,,,,,,,2026-09-03T09:00:00+08:00,2026-09-03T18:00:00+08:00,Submitted,2026-09-03
+employee,TST-REC-00321,EMP-0321,Rafiq Lim,Human Resources,rafiq.lim.321@example.test,Active,2026-09-14,,,,,,,,,,,,Approved,2026-09-15
+claim,TST-REC-00322,EMP-0153,Iman Hassan,Sales & Marketing,iman.hassan.153@example.test,Active,2026-08-18,TST-CLM-00322,Training,127,Approved training fee,,,,,,,,Submitted,2026-08-19
+claim,TST-REC-00323,EMP-0222,Nadia Karim,Finance,nadia.karim.222@example.test,Active,2026-08-05,TST-CLM-00323,Parking,302,Office parking reimbursement,,,,,,,,Approved,2026-08-06
+claim,TST-REC-00324,EMP-0278,Arif Abdullah,Sales & Marketing,arif.abdullah.278@example.test,Active,2026-08-14,TST-CLM-00324,Travel,154,Team lunch allowance,,,,,,,,Approved,2026-08-16
+claim,TST-REC-00325,EMP-0172,Lina Nair,Finance,lina.nair.172@example.test,Active,2026-10-11,TST-CLM-00325,Travel,233,Team lunch allowance,,,,,,,,Pending,2026-10-11
+leave,TST-REC-00326,EMP-0352,Priya Hassan,Finance,priya.hassan.352@example.test,Active,2026-10-07,,,,,TST-LEV-00326,Annual,2026-10-07,2026-10-07,1,,,Submitted,2026-10-08
+leave,TST-REC-00327,EMP-0303,Omar Rahman,Sales & Marketing,omar.rahman.303@example.test,Active,2026-08-09,,,,,TST-LEV-00327,Annual,2026-08-09,2026-08-12,4,,,Approved,2026-08-10
+attendance,TST-REC-00328,EMP-0295,Dania Rahman,Operations,dania.rahman.295@example.test,Active,2026-09-03,,,,,,,,,,2026-09-03T09:00:00+08:00,2026-09-03T18:00:00+08:00,Pending,2026-09-04
+attendance,TST-REC-00329,EMP-0197,Aina Wong,Finance,aina.wong.197@example.test,Active,2026-09-26,,,,,,,,,,2026-09-26T09:00:00+08:00,2026-09-26T18:00:00+08:00,Approved,2026-09-26
+attendance,TST-REC-00330,EMP-0255,Omar Das,Operations,omar.das.255@example.test,Active,2026-10-15,,,,,,,,,,2026-10-15T09:00:00+08:00,2026-10-15T18:00:00+08:00,Submitted,2026-10-16
+employee,TST-REC-00331,EMP-0228,Wei Karim,Sales & Marketing,wei.karim.228@example.test,Active,2026-09-10,,,,,,,,,,,,Submitted,2026-09-12
+claim,TST-REC-00332,EMP-0145,Rafiq Tan,Operations,rafiq.tan.145@example.test,Active,2026-09-11,TST-CLM-00332,Parking,56,Office parking reimbursement,,,,,,,,Pending,2026-09-14
+claim,TST-REC-00333,EMP-0296,Hakim Rahman,Human Resources,hakim.rahman.296@example.test,Active,2026-08-11,TST-CLM-00333,Travel,259,Team lunch allowance,,,,,,,,Approved,2026-08-12
+claim,TST-REC-00334,EMP-0148,Wei Tan,Sales & Marketing,wei.tan.148@example.test,Active,2026-08-27,TST-CLM-00334,Transport,91,Client meeting taxi fare,,,,,,,,Pending,2026-08-28
+claim,TST-REC-00335,EMP-0181,Aina Ismail,Human Resources,aina.ismail.181@example.test,Active,2026-09-11,TST-CLM-00335,Meal,230,Travel to branch meeting,,,,,,,,Pending,2026-09-13
+leave,TST-REC-00336,EMP-0129,Rafiq Lim,Information Technology,rafiq.lim.129@example.test,Active,2026-09-08,,,,,TST-LEV-00336,Emergency,2026-09-08,2026-09-10,3,,,Approved,2026-09-08
+leave,TST-REC-00337,EMP-0147,Tariq Tan,Finance,tariq.tan.147@example.test,Active,2026-10-10,,,,,TST-LEV-00337,Medical,2026-10-10,2026-10-10,1,,,Pending,2026-10-10
+attendance,TST-REC-00338,EMP-0224,Priya Karim,Information Technology,priya.karim.224@example.test,Active,2026-08-06,,,,,,,,,,2026-08-06T09:00:00+08:00,2026-08-06T18:00:00+08:00,Submitted,2026-08-07
+attendance,TST-REC-00339,EMP-0307,Tariq Rahman,Finance,tariq.rahman.307@example.test,Active,2026-08-23,,,,,,,,,,2026-08-23T09:00:00+08:00,2026-08-23T18:00:00+08:00,Submitted,2026-08-26
+attendance,TST-REC-00340,EMP-0261,Aina Lee,Human Resources,aina.lee.261@example.test,Active,2026-08-22,,,,,,,,,,2026-08-22T09:00:00+08:00,2026-08-22T18:00:00+08:00,Approved,2026-08-25
+employee,TST-REC-00341,EMP-0143,Omar Tan,Sales & Marketing,omar.tan.143@example.test,Active,2026-10-13,,,,,,,,,,,,Approved,2026-10-16
+claim,TST-REC-00342,EMP-0219,Kavya Karim,Information Technology,kavya.karim.219@example.test,Active,2026-08-18,TST-CLM-00342,Travel,192,Team lunch allowance,,,,,,,,Pending,2026-08-21
+claim,TST-REC-00343,EMP-0149,Aina Hassan,Information Technology,aina.hassan.149@example.test,Active,2026-10-27,TST-CLM-00343,Meal,209,Travel to branch meeting,,,,,,,,Approved,2026-10-30
+claim,TST-REC-00344,EMP-0186,Jia Ismail,Human Resources,jia.ismail.186@example.test,Active,2026-09-27,TST-CLM-00344,Meal,141,Travel to branch meeting,,,,,,,,Approved,2026-09-28
+claim,TST-REC-00345,EMP-0176,Priya Nair,Human Resources,priya.nair.176@example.test,Active,2026-09-05,TST-CLM-00345,Travel,395,Team lunch allowance,,,,,,,,Pending,2026-09-07
+leave,TST-REC-00346,EMP-0306,Sofia Rahman,Human Resources,sofia.rahman.306@example.test,Active,2026-09-10,,,,,TST-LEV-00346,Annual,2026-09-10,2026-09-10,1,,,Pending,2026-09-11
+leave,TST-REC-00347,EMP-0161,Rafiq Hassan,Human Resources,rafiq.hassan.161@example.test,Active,2026-10-12,,,,,TST-LEV-00347,Compassionate,2026-10-12,2026-10-13,2,,,Pending,2026-10-14
+attendance,TST-REC-00348,EMP-0323,Tariq Lim,Sales & Marketing,tariq.lim.323@example.test,Active,2026-10-19,,,,,,,,,,2026-10-19T09:00:00+08:00,2026-10-19T18:00:00+08:00,Submitted,2026-10-20
+attendance,TST-REC-00349,EMP-0153,Iman Hassan,Sales & Marketing,iman.hassan.153@example.test,Active,2026-10-07,,,,,,,,,,2026-10-07T09:00:00+08:00,2026-10-07T18:00:00+08:00,Approved,2026-10-10
+attendance,TST-REC-00350,EMP-0188,Lina Ismail,Sales & Marketing,lina.ismail.188@example.test,Active,2026-08-03,,,,,,,,,,2026-08-03T09:00:00+08:00,2026-08-03T18:00:00+08:00,Approved,2026-08-04
+employee,TST-REC-00351,EMP-0132,Wei Lim,Finance,wei.lim.132@example.test,Active,2026-08-13,,,,,,,,,,,,Approved,2026-08-16
+claim,TST-REC-00352,EMP-0242,Sofia Yusof,Finance,sofia.yusof.242@example.test,Active,2026-09-14,TST-CLM-00352,Meal,373,Travel to branch meeting,,,,,,,,Approved,2026-09-16
+claim,TST-REC-00353,EMP-0278,Arif Abdullah,Sales & Marketing,arif.abdullah.278@example.test,Active,2026-10-22,TST-CLM-00353,Office supplies,153,Stationery and supplies,,,,,,,,Submitted,2026-10-22
+claim,TST-REC-00354,EMP-0127,Omar Lim,Finance,omar.lim.127@example.test,Active,2026-10-01,TST-CLM-00354,Training,18,Approved training fee,,,,,,,,Submitted,2026-10-01
+claim,TST-REC-00355,EMP-0298,Jia Rahman,Sales & Marketing,jia.rahman.298@example.test,Active,2026-09-16,TST-CLM-00355,Transport,355,Client meeting taxi fare,,,,,,,,Approved,2026-09-19
+leave,TST-REC-00356,EMP-0252,Lina Das,Finance,lina.das.252@example.test,Active,2026-09-11,,,,,TST-LEV-00356,Medical,2026-09-11,2026-09-11,1,,,Pending,2026-09-12
+leave,TST-REC-00357,EMP-0310,Arif Lim,Operations,arif.lim.310@example.test,Active,2026-08-11,,,,,TST-LEV-00357,Medical,2026-08-11,2026-08-11,1,,,Pending,2026-08-12
+attendance,TST-REC-00358,EMP-0308,Wei Rahman,Sales & Marketing,wei.rahman.308@example.test,Active,2026-08-16,,,,,,,,,,2026-08-16T09:00:00+08:00,2026-08-16T18:00:00+08:00,Pending,2026-08-18
+attendance,TST-REC-00359,EMP-0221,Mika Karim,Human Resources,mika.karim.221@example.test,Active,2026-09-17,,,,,,,,,,2026-09-17T09:00:00+08:00,2026-09-17T18:00:00+08:00,Approved,2026-09-19
+attendance,TST-REC-00360,EMP-0303,Omar Rahman,Sales & Marketing,omar.rahman.303@example.test,Active,2026-09-16,,,,,,,,,,2026-09-16T09:00:00+08:00,2026-09-16T18:00:00+08:00,Approved,2026-09-16
+employee,TST-REC-00361,EMP-0286,Nadia Abdullah,Human Resources,nadia.abdullah.286@example.test,Active,2026-10-12,,,,,,,,,,,,Approved,2026-10-14
+claim,TST-REC-00362,EMP-0154,Jia Hassan,Information Technology,jia.hassan.154@example.test,Active,2026-09-18,TST-CLM-00362,Travel,318,Team lunch allowance,,,,,,,,Approved,2026-09-18
+claim,TST-REC-00363,EMP-0243,Tariq Yusof,Sales & Marketing,tariq.yusof.243@example.test,Active,2026-08-25,TST-CLM-00363,Meal,189,Travel to branch meeting,,,,,,,,Submitted,2026-08-27
+claim,TST-REC-00364,EMP-0168,Hakim Nair,Sales & Marketing,hakim.nair.168@example.test,Active,2026-08-18,TST-CLM-00364,Training,201,Approved training fee,,,,,,,,Approved,2026-08-18
+claim,TST-REC-00365,EMP-0239,Omar Yusof,Information Technology,omar.yusof.239@example.test,Active,2026-10-08,TST-CLM-00365,Meal,348,Travel to branch meeting,,,,,,,,Pending,2026-10-09
+leave,TST-REC-00366,EMP-0338,Sofia Tan,Sales & Marketing,sofia.tan.338@example.test,Active,2026-08-04,,,,,TST-LEV-00366,Compassionate,2026-08-04,2026-08-07,4,,,Pending,2026-08-07
+leave,TST-REC-00367,EMP-0129,Rafiq Lim,Information Technology,rafiq.lim.129@example.test,Active,2026-10-24,,,,,TST-LEV-00367,Medical,2026-10-24,2026-10-27,4,,,Pending,2026-10-27
+attendance,TST-REC-00368,EMP-0288,Priya Abdullah,Sales & Marketing,priya.abdullah.288@example.test,Active,2026-09-07,,,,,,,,,,2026-09-07T09:00:00+08:00,2026-09-07T18:00:00+08:00,Submitted,2026-09-08
+attendance,TST-REC-00369,EMP-0300,Lina Rahman,Operations,lina.rahman.300@example.test,Active,2026-10-27,,,,,,,,,,2026-10-27T09:00:00+08:00,2026-10-27T18:00:00+08:00,Submitted,2026-10-30
+attendance,TST-REC-00370,EMP-0146,Sofia Tan,Human Resources,sofia.tan.146@example.test,Active,2026-09-06,,,,,,,,,,2026-09-06T09:00:00+08:00,2026-09-06T18:00:00+08:00,Submitted,2026-09-07
+employee,TST-REC-00371,EMP-0275,Tariq Lee,Operations,tariq.lee.275@example.test,Active,2026-09-15,,,,,,,,,,,,Pending,2026-09-16
+claim,TST-REC-00372,EMP-0211,Tariq Wong,Human Resources,tariq.wong.211@example.test,Active,2026-09-12,TST-CLM-00372,Transport,32,Client meeting taxi fare,,,,,,,,Approved,2026-09-14
+claim,TST-REC-00373,EMP-0272,Priya Lee,Finance,priya.lee.272@example.test,Active,2026-09-08,TST-CLM-00373,Transport,120,Client meeting taxi fare,,,,,,,,Submitted,2026-09-08
+claim,TST-REC-00374,EMP-0252,Lina Das,Finance,lina.das.252@example.test,Active,2026-10-23,TST-CLM-00374,Transport,347,Client meeting taxi fare,,,,,,,,Approved,2026-10-25
+claim,TST-REC-00375,EMP-0101,Aina Rahman,Human Resources,aina.rahman.101@example.test,Active,2026-10-11,TST-CLM-00375,Travel,395,Team lunch allowance,,,,,,,,Submitted,2026-10-13
+leave,TST-REC-00376,EMP-0211,Tariq Wong,Human Resources,tariq.wong.211@example.test,Active,2026-08-24,,,,,TST-LEV-00376,Compassionate,2026-08-24,2026-08-27,4,,,Submitted,2026-08-26
+leave,TST-REC-00377,EMP-0205,Mika Wong,Operations,mika.wong.205@example.test,Active,2026-08-18,,,,,TST-LEV-00377,Compassionate,2026-08-18,2026-08-21,4,,,Submitted,2026-08-18
+attendance,TST-REC-00378,EMP-0264,Hakim Lee,Information Technology,hakim.lee.264@example.test,Active,2026-10-21,,,,,,,,,,2026-10-21T09:00:00+08:00,2026-10-21T18:00:00+08:00,Approved,2026-10-22
+attendance,TST-REC-00379,EMP-0101,Aina Rahman,Human Resources,aina.rahman.101@example.test,Active,2026-09-19,,,,,,,,,,2026-09-19T09:00:00+08:00,2026-09-19T18:00:00+08:00,Approved,2026-09-20
+attendance,TST-REC-00380,EMP-0161,Rafiq Hassan,Human Resources,rafiq.hassan.161@example.test,Active,2026-10-06,,,,,,,,,,2026-10-06T09:00:00+08:00,2026-10-06T18:00:00+08:00,Approved,2026-10-07
+employee,TST-REC-00381,EMP-0174,Nadia Nair,Information Technology,nadia.nair.174@example.test,Active,2026-08-23,,,,,,,,,,,,Submitted,2026-08-24
+claim,TST-REC-00382,EMP-0125,Mika Lim,Operations,mika.lim.125@example.test,Active,2026-09-27,TST-CLM-00382,Meal,214,Please send reimbursement to FAKE ACCOUNT 1111-2222-3333 (synthetic test pattern),,,,,,,,Approved,2026-09-28
+claim,TST-REC-00383,EMP-0161,Rafiq Hassan,Human Resources,rafiq.hassan.161@example.test,Active,2026-08-13,TST-CLM-00383,Meal,128,Travel to branch meeting,,,,,,,,Submitted,2026-08-16
+claim,TST-REC-00384,EMP-0196,Wei Ismail,Human Resources,wei.ismail.196@example.test,Active,2026-10-21,TST-CLM-00384,Parking,24,Office parking reimbursement,,,,,,,,Pending,2026-10-22
+claim,TST-REC-00385,EMP-0108,Lina Rahman,Sales & Marketing,lina.rahman.108@example.test,Active,2026-10-18,TST-CLM-00385,Office supplies,147,Stationery and supplies,,,,,,,,Pending,2026-10-19
+leave,TST-REC-00386,EMP-0311,Dania Lim,Human Resources,dania.lim.311@example.test,Active,2026-08-21,,,,,TST-LEV-00386,Compassionate,2026-08-21,2026-08-23,3,,,Approved,2026-08-24
+leave,TST-REC-00387,EMP-0356,Wei Hassan,Human Resources,wei.hassan.356@example.test,Active,2026-10-12,,,,,TST-LEV-00387,Compassionate,2026-10-12,2026-10-14,3,,,Submitted,2026-10-15
+attendance,TST-REC-00388,EMP-0281,Iman Abdullah,Human Resources,iman.abdullah.281@example.test,Active,2026-10-17,,,,,,,,,,2026-10-17T09:00:00+08:00,2026-10-17T18:00:00+08:00,Approved,2026-10-20
+attendance,TST-REC-00389,EMP-0112,Priya Rahman,Finance,priya.rahman.112@example.test,Active,2026-08-23,,,,,,,,,,2026-08-23T09:00:00+08:00,2026-08-23T18:00:00+08:00,Approved,2026-08-25
+attendance,TST-REC-00390,EMP-0197,Aina Wong,Finance,aina.wong.197@example.test,Active,2026-09-07,,,,,,,,,,2026-09-07T09:00:00+08:00,2026-09-07T18:00:00+08:00,Approved,2026-09-08
+employee,TST-REC-00391,EMP-0156,Lina Hassan,Human Resources,lina.hassan.156@example.test,Active,2026-10-23,,,,,,,,,,,,Approved,2026-10-26
+claim,TST-REC-00392,EMP-0214,Arif Karim,Information Technology,arif.karim.214@example.test,Active,2026-09-13,TST-CLM-00392,Office supplies,211,Stationery and supplies,,,,,,,,Approved,2026-09-13
+claim,TST-REC-00393,EMP-0152,Hakim Hassan,Finance,hakim.hassan.152@example.test,Active,2026-08-22,TST-CLM-00393,Travel,373,Team lunch allowance,,,,,,,,Pending,2026-08-22
+claim,TST-REC-00394,EMP-0262,Arif Lee,Finance,arif.lee.262@example.test,Active,2026-10-19,TST-CLM-00394,Meal,97,Travel to branch meeting,,,,,,,,Pending,2026-10-22
+claim,TST-REC-00395,EMP-0322,Sofia Lim,Finance,sofia.lim.322@example.test,Active,2026-10-06,TST-CLM-00395,Travel,185,Team lunch allowance,,,,,,,,Approved,2026-10-06
+leave,TST-REC-00396,EMP-0266,Jia Lee,Human Resources,jia.lee.266@example.test,Active,2026-10-23,,,,,TST-LEV-00396,Annual,2026-10-23,2026-10-24,2,,,Approved,2026-10-23
+leave,TST-REC-00397,EMP-0354,Sofia Hassan,Information Technology,sofia.hassan.354@example.test,Active,2026-08-26,,,,,TST-LEV-00397,Annual,2026-08-26,2026-08-29,4,,,Approved,2026-08-27
+attendance,TST-REC-00398,EMP-0309,Aina Lim,Information Technology,aina.lim.309@example.test,Active,2026-10-25,,,,,,,,,,2026-10-25T09:00:00+08:00,2026-10-25T18:00:00+08:00,Approved,2026-10-28
+attendance,TST-REC-00399,EMP-0103,Dania Rahman,Sales & Marketing,dania.rahman.103@example.test,Active,2026-10-25,,,,,,,,,,2026-10-25T09:00:00+08:00,2026-10-25T18:00:00+08:00,Approved,2026-10-25
+attendance,TST-REC-00400,EMP-0157,Mika Hassan,Finance,mika.hassan.157@example.test,Active,2026-08-16,,,,,,,,,,2026-08-16T09:00:00+08:00,2026-08-16T18:00:00+08:00,Submitted,2026-08-18
