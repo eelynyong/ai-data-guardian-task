@@ -12,14 +12,8 @@ import {
   departments, employees, initialFindings, policyCards, sampleCsv,
   parseCsv, scanDemoRows, trend,
   type CsvRow, type Employee, type Finding, type FindingStatus, type PageKey,
-  type Severity,
+  type Role, type Severity,
 } from './demoData'
-
-type AppProps = {
-  userName: string
-  userRole: string
-  onLogout: () => void
-}
 
 type NavItem = { key: PageKey; title: string; icon: LucideIcon }
 const hrNav: NavItem[] = [
@@ -58,11 +52,9 @@ function RecordTable({rows,findings,onOpen}:{rows:CsvRow[],findings:Finding[],on
   return <div className="table-scroller"><table className="data-table spreadsheet"><thead><tr><th>CSV row</th>{headers.map(h=><th key={h}>{h.replaceAll('_',' ')}</th>)}</tr></thead><tbody>{rows.slice(0,80).map((row,index)=><tr key={index}><td className="muted">{index+2}</td>{headers.map(h=>{const issue=findings.find(f=>f.row===index+2&&f.field===h);const raw=row[h]??'';const preview=issue?.type==='Sensitive information'?'•••••• [masked]':(raw||'—');return <td key={h} className={issue?'cell-issue':''}>{issue?<button className="cell-btn" title={`Open ${issue.type} finding`} onClick={()=>onOpen(issue)}><ShieldAlert size={13}/>{preview}</button>:preview}</td>})}</tr>)}</tbody></table></div>
 }
 
-export default function App(props: AppProps) {
-  const [page, setPage] = useState<PageKey>(
-  props.userRole === 'Employee' ? 'mycorrections' : 'overview'
-)
-  const role = props.userRole
+export default function App() {
+  const [page,setPage]=useState<PageKey>('overview')
+  const [role,setRole]=useState<Role>('HR Manager')
   const [department,setDepartment]=useState('All departments')
   const [period,setPeriod]=useState('November 2026')
   const [findings,setFindings]=useState<Finding[]>(initialFindings)
@@ -85,6 +77,7 @@ export default function App(props: AppProps) {
   const issueSummary=findings.filter(f=>f.status==='Awaiting Employee').length
 
   function navigate(to:PageKey){setPage(to);setSearch('');setSelectedEmployee(null);setMenuOpen(false)}
+  function changeRole(to:Role){setRole(to);setDepartment('All departments');navigate(to==='Employee'?'mycorrections':'overview')}
   function changeStatus(id:string,status:FindingStatus){setFindings(old=>old.map(f=>f.id===id?{...f,status}:f));setSelectedIssue(old=>old?.id===id?{...old,status}:old);setNotice(status==='Awaiting Employee'?'An in-app employee request was created (demo only).':`Issue moved to ${status.toLowerCase()}.`)}
   function openIssue(f:Finding){setSelectedIssue(f);setNotice('')}
   
@@ -160,38 +153,13 @@ async function loadRows(rows: CsvRow[], name: string) {
     </aside>
     {menuOpen&&<button aria-label="Close sidebar" className="mobile-backdrop" onClick={()=>setMenuOpen(false)}/>}
     <main className="main-area">
-      <header className="topbar">
-        <div className="topbar-left">
-          <button className="icon-button mobile-menu" onClick={() => setMenuOpen(true)} aria-label="Open menu">
-            <Menu size={20}/>
-          </button>
-          <span className="breadcrumb">Workspace <ChevronRight size={14}/> <strong>{titleMap[page]}</strong></span>
-        </div>
-        <div className="topbar-right">
-          <span className="demo-badge"><span className="dot"/> DEMO MODE</span>
-          <button className="icon-button" aria-label="Open notifications" onClick={() => navigate('notifications')}>
-            <Bell size={19}/>{issueSummary > 0 && <span className="notification-dot"/>}
-          </button>
-          <div className="user-control">
-            <div className="user-avatar">
-              {props.userName.trim().split(/\s+/).slice(0, 2).map(part => part.charAt(0)).join('').toUpperCase() || 'HR'}
-            </div>
-            <div className="user-meta">
-              <strong>{props.userName}</strong>
-              <span>{role}</span>
-            </div>
-            <button type="button" className="button secondary small" onClick={props.onLogout}>
-              Log out
-            </button>
-          </div>
-        </div>
-      </header>
+      <header className="topbar"><div className="topbar-left"><button className="icon-button mobile-menu" onClick={()=>setMenuOpen(true)} aria-label="Open menu"><Menu size={20}/></button><span className="breadcrumb">Workspace <ChevronRight size={14}/> <strong>{titleMap[page]}</strong></span></div><div className="topbar-right"><span className="demo-badge"><span className="dot"/> DEMO MODE</span><button className="icon-button" aria-label="Open notifications" onClick={()=>navigate('notifications')}><Bell size={19}/>{issueSummary>0&&<span className="notification-dot"/>}</button><div className="user-control"><div className="user-avatar">{isEmployee?'NI':'EH'}</div><div className="user-meta"><strong>{isEmployee?'Nur Iman':'Eelyn HR'}</strong><select aria-label="Switch demo role" value={role} onChange={e=>changeRole(e.target.value as Role)}><option>HR Manager</option><option>HR Officer</option><option>Employee</option></select></div><ChevronDown size={14}/></div></div></header>
       <div className="content-wrap">
         {notice&&<div className="toast" role="status"><Check size={17}/>{notice}<button aria-label="Dismiss notification" onClick={()=>setNotice('')}><X size={16}/></button></div>}
         {!isEmployee&&['overview','departments','employees','issues','reports'].includes(page)&&<div className="filter-strip"><div className="filter-group"><Filter size={15}/><select value={department} onChange={e=>setDepartment(e.target.value)} aria-label="Filter by department"><option>All departments</option>{departments.map(d=><option key={d.name}>{d.name}</option>)}</select></div><div className="filter-group"><CalendarDays size={15}/><select value={period} onChange={e=>setPeriod(e.target.value)} aria-label="Reporting period"><option>November 2026</option><option>October 2026</option><option>Last 3 months</option><option>Year to date</option></select></div><span className="filter-note">Illustrative scores · {period}</span></div>}
 
         {page==='overview'&&!isEmployee&&<>
-          <div className="page-heading"><div><p className="eyebrow">MONDAY, 2 NOVEMBER 2026</p><h1>Good morning, {props.userName} <span className="wave">✳</span></h1><p>Monitor employee records, claims, leave and attendance in one place.</p></div><button className="button primary" onClick={()=>navigate('imports')}><UploadCloud size={17}/> Upload data</button></div>
+          <div className="page-heading"><div><p className="eyebrow">MONDAY, 2 NOVEMBER 2026</p><h1>Good morning, Eelyn <span className="wave">✳</span></h1><p>Monitor employee records, claims, leave and attendance in one place.</p></div><button className="button primary" onClick={()=>navigate('imports')}><UploadCloud size={17}/> Upload data</button></div>
           <div className="metrics-grid"><Metric label="Overall data quality" value={department==='All departments'?'91.4%':`${departments.find(d=>d.name===department)?.quality??91}%`} note="Target: 95%" icon={Gauge} tone="blue" change="+2.4%"/><Metric label="Claims processed" value="1,284" note="36 records flagged" icon={Wallet} tone="purple"/><Metric label="Leave requests" value="748" note="14 need attention" icon={CalendarDays} tone="yellow"/><Metric label="Attendance records" value="5,420" note="62 anomalies found" icon={Clock3} tone="teal"/></div>
           <div className="dashboard-grid"><section className="panel"><div className="panel-heading"><div><h2>Department quality score</h2><p>Latest completed demo snapshot</p></div><button className="text-link" onClick={()=>navigate('departments')}>View all <ArrowRight size={15}/></button></div><div className="dept-bars">{departments.filter(d=>department==='All departments'||d.name===department).map(d=><button className="dept-bar-row" key={d.name} onClick={()=>{setDepartment(d.name);navigate('departments')}}><span className="dept-label">{d.name}</span><span className="bar-track"><span style={{width:`${d.quality}%`,background:d.color}}/></span><strong>{d.quality}%</strong></button>)}</div><div className="panel-footer"><span className="legend-dot green"/> Excellent 95%+ <span className="legend-dot amber"/> Needs attention &lt; 90%</div></section><section className="panel"><div className="panel-heading"><div><h2>Quality trend</h2><p>Six-month improvement</p></div><span className="soft-badge positive"><TrendingUp size={13}/> +10%</span></div><div className="trend-graph">{trend.map(t=><div className="trend-column" key={t.month}><span className="trend-val">{t.score}%</span><div className="trend-track"><span style={{height:`${t.score}%`}}/></div><small>{t.month}</small></div>)}</div><div className="panel-footer"><span className="legend-dot indigo"/> Overall data quality score</div></section></div>
           <div className="dashboard-grid lower"><section className="panel"><div className="panel-heading"><div><h2>Recent issues</h2><p>Findings requiring HR action</p></div><button className="text-link" onClick={()=>navigate('issues')}>Issue center <ArrowRight size={15}/></button></div><div className="issue-list">{openFindings.slice(0,4).map(f=><button className="issue-row" key={f.id} onClick={()=>openIssue(f)}><span className={`issue-dot ${f.severity.toLowerCase()}`}/><span><strong>{f.type}</strong><small>{f.employee} · {f.department}</small></span><StatusPill value={f.severity}/><ChevronRight size={15}/></button>)}</div></section><section className="panel recommendation-panel"><div className="panel-heading"><div><h2><Sparkles size={18}/> AI insights preview</h2><p>Rule-based demo summary</p></div><span className="soft-badge purple">BETA</span></div><div className="insight-content"><span className="insight-icon"><Sparkles size={22}/></span><strong>Focus on Finance and Operations</strong><p>These departments have the lowest illustrative data-quality scores. Start with sensitive details in claims and missing attendance records.</p><button className="button secondary" onClick={()=>navigate('assistant')}>Explore recommendations <ArrowRight size={16}/></button></div></section></div>

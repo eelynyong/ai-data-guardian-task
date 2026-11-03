@@ -5,11 +5,3 @@ dist/
 .DS_Store
 *.log
 .vscode/settings.json
-
-node_modules/
-dist/
-.env
-.env.local
-.env.*.local
-*.tsbuildinfo
-*.log
