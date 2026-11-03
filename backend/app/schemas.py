@@ -33,3 +33,12 @@ class AnalyzeResponse(BaseModel):
     totalFindings: int
     qualityScore: float
     findings: list[Finding]
+
+
+class AnalyzeWithAIResponse(AnalyzeResponse):
+    aiSummary: str
+    recommendedActions: list[str]
+    recommendationSource: Literal[
+        "rules",
+        "gemini_enterprise"
+    ]
