@@ -2,28 +2,40 @@
 import os
 import secrets
 
-from fastapi import FastAPI, Header, HTTPException
+from fastapi import (
+    FastAPI,
+    Header,
+    HTTPException,
+)
+
+from app.analyzer import analyze_rows
+
+from app.ai_recommendations import (
+    generate_recommendations,
+)
 
 from app.schemas import (
     AnalyzeRequest,
     AnalyzeResponse,
     AnalyzeWithAIResponse,
 )
-from app.analyzer import analyze_rows
-from app.ai_recommendations import generate_recommendations
 
 
 app = FastAPI(
     title="AI Data Guardian",
-    description="HR Data Quality and AI Recommendations Backend",
-    version="1.1.0",
+    description=(
+        "HR Data Quality Detection and "
+        "Gemini Enterprise Recommendations"
+    ),
+    version="1.2.0",
 )
 
 
 @app.get("/")
 def home():
     return {
-        "message": "AI Data Guardian Backend is running"
+        "message":
+            "AI Data Guardian Backend is running"
     }
 
 
@@ -38,12 +50,21 @@ def health():
 def verify_internal_key(
     x_internal_api_key: str | None,
 ) -> None:
+    """
+    Protect internal API endpoints.
+
+    The Express middleware must provide the
+    matching internal API key.
+    """
+
     expected_key = os.getenv("INTERNAL_API_KEY")
 
     if not expected_key:
         raise HTTPException(
             status_code=503,
-            detail="Backend authentication not configured",
+            detail=(
+                "Backend authentication not configured"
+            ),
         )
 
     if (
@@ -65,11 +86,24 @@ def verify_internal_key(
 )
 def analyze(
     request: AnalyzeRequest,
-    x_internal_api_key: str | None = Header(default=None),
+    x_internal_api_key: str | None = Header(
+        default=None
+    ),
 ):
-    verify_internal_key(x_internal_api_key)
+    """
+    Data-quality analysis without Gemini.
 
-    return analyze_rows(request.rows)
+    Maintains compatibility with the original
+    Node.js-to-FastAPI connection test.
+    """
+
+    verify_internal_key(
+        x_internal_api_key
+    )
+
+    return analyze_rows(
+        request.rows
+    )
 
 
 @app.post(
@@ -78,14 +112,26 @@ def analyze(
 )
 def analyze_with_ai(
     request: AnalyzeRequest,
-    x_internal_api_key: str | None = Header(default=None),
+    x_internal_api_key: str | None = Header(
+        default=None
+    ),
 ):
-    verify_internal_key(x_internal_api_key)
+    """
+    Analyze HR data and generate recommendations.
 
-    # First: deterministic Python quality checks
-    analysis = analyze_rows(request.rows)
+    Step 1: Python detects quality issues.
+    Step 2: Gemini or rules generates advice.
+    Step 3: Return JSON to Express middleware.
+    """
 
-    # Second: Gemini or fallback recommendations
+    verify_internal_key(
+        x_internal_api_key
+    )
+
+    analysis = analyze_rows(
+        request.rows
+    )
+
     recommendations = generate_recommendations(
         findings=analysis.findings,
         rows_analyzed=analysis.rowsAnalyzed,
