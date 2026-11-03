@@ -4,11 +4,9 @@ import os
 import re
 
 import google.auth
-from google.auth.transport.requests import Request
-import requests
+from google.auth.transport.requests import AuthorizedSession
 
 
-# Supported example endpoint locations.
 ALLOWED_LOCATIONS = {"global", "us", "eu"}
 
 RESOURCE_ID_PATTERN = re.compile(
@@ -18,57 +16,112 @@ RESOURCE_ID_PATTERN = re.compile(
 
 def extract_assistant_text(response_data: dict) -> str:
     """
-    Extract final text from a Gemini Enterprise
-    Assistant API response.
+    Extract text from a non-streaming assistant response.
+
+    Kept for compatibility with existing tests.
     """
+    if not isinstance(response_data, dict):
+        raise ValueError("Invalid assistant response")
 
     answer = response_data.get("answer", {})
 
-    if not isinstance(answer, dict):
-        raise ValueError("Invalid assistant answer")
-
     if answer.get("state") != "SUCCEEDED":
-        raise ValueError(
-            "Gemini Enterprise did not complete successfully"
-        )
+        raise ValueError("Assistant did not succeed")
 
-    text_parts = []
+    parts = []
 
     for reply in answer.get("replies", []):
-        grounded_content = reply.get(
-            "groundedContent", {}
+        content = (
+            reply.get("groundedContent", {})
+            .get("content", {})
         )
 
-        content = grounded_content.get(
-            "content", {}
-        )
-
-        # Do not expose internal thought content.
         if content.get("thought") is True:
             continue
 
         text = content.get("text", "")
 
-        if isinstance(text, str) and text.strip():
-            text_parts.append(text.strip())
+        if isinstance(text, str) and text:
+            parts.append(text)
 
-    if not text_parts:
+    if not parts:
+        raise ValueError("Assistant returned no answer text")
+
+    return "".join(parts)
+
+
+def extract_stream_assistant_text(chunks: list) -> str:
+    """
+    Extract the generated answer from StreamAssist.
+
+    StreamAssist returns multiple response objects.
+    Answer text is accumulated in chunk order.
+    Internal thought content is excluded.
+    """
+    if not isinstance(chunks, list) or not chunks:
+        raise ValueError("Empty StreamAssist response")
+
+    text_parts = []
+    final_state = None
+
+    for chunk in chunks:
+        if not isinstance(chunk, dict):
+            continue
+
+        answer = chunk.get("answer", {})
+
+        if not isinstance(answer, dict):
+            continue
+
+        state = answer.get("state")
+
+        if state:
+            final_state = state
+
+        for reply in answer.get("replies", []):
+            if not isinstance(reply, dict):
+                continue
+
+            content = (
+                reply.get("groundedContent", {})
+                .get("content", {})
+            )
+
+            if not isinstance(content, dict):
+                continue
+
+            # Do not include model reasoning.
+            if content.get("thought") is True:
+                continue
+
+            text = content.get("text", "")
+
+            if isinstance(text, str) and text:
+                text_parts.append(text)
+
+    if final_state != "SUCCEEDED":
         raise ValueError(
-            "Gemini Enterprise returned no usable text"
+            "StreamAssist did not finish successfully"
         )
 
-    return "\n".join(text_parts)
+    combined_text = "".join(text_parts).strip()
+
+    if not combined_text:
+        raise ValueError(
+            "StreamAssist returned no usable answer"
+        )
+
+    return combined_text
 
 
 def parse_recommendation_json(text: str) -> dict:
     """
-    Parse structured recommendation JSON
-    returned by Gemini Enterprise.
+    Convert the generated recommendation into JSON.
     """
 
     text = text.strip()
 
-    # Allow JSON enclosed in Markdown code fences.
+    # Support JSON wrapped in Markdown code fences.
     if text.startswith("```"):
         lines = text.splitlines()
 
@@ -84,7 +137,7 @@ def parse_recommendation_json(text: str) -> dict:
 
     if not isinstance(result, dict):
         raise ValueError(
-            "Gemini response must be a JSON object"
+            "Recommendation must be a JSON object"
         )
 
     return result
@@ -92,20 +145,31 @@ def parse_recommendation_json(text: str) -> dict:
 
 def call_gemini_enterprise_app(prompt: str) -> dict:
     """
-    Call an existing Gemini Enterprise app using
-    the Discovery Engine assistants.assist API.
+    Generate recommendations using the Gemini
+    Enterprise StreamAssist API.
 
-    Requires an approved app, ADC, and IAM access.
+    Sends only the prompt supplied by the calling
+    recommendation service.
+
+    Returns a dictionary with:
+      summary
+      actions
     """
 
-    project = os.getenv("GOOGLE_CLOUD_PROJECT", "")
-    location = os.getenv("GEMINI_APP_LOCATION", "")
-    app_id = os.getenv("GEMINI_APP_ID", "")
+    project = os.getenv(
+        "GOOGLE_CLOUD_PROJECT", ""
+    ).strip()
 
-    if not project:
-        raise ValueError(
-            "GOOGLE_CLOUD_PROJECT is missing"
-        )
+    location = os.getenv(
+        "GEMINI_APP_LOCATION", ""
+    ).strip()
+
+    app_id = os.getenv(
+        "GEMINI_APP_ID", ""
+    ).strip()
+
+    if not RESOURCE_ID_PATTERN.fullmatch(project):
+        raise ValueError("Invalid Google Cloud project")
 
     if location not in ALLOWED_LOCATIONS:
         raise ValueError(
@@ -113,24 +177,18 @@ def call_gemini_enterprise_app(prompt: str) -> dict:
         )
 
     if not RESOURCE_ID_PATTERN.fullmatch(app_id):
-        raise ValueError(
-            "Invalid or missing Gemini app ID"
-        )
+        raise ValueError("Invalid Gemini app ID")
 
-    if not RESOURCE_ID_PATTERN.fullmatch(project):
-        raise ValueError(
-            "Invalid Google Cloud project ID"
-        )
+    if not isinstance(prompt, str) or not prompt.strip():
+        raise ValueError("Empty Gemini prompt")
 
-    # Load credentials from Google Cloud ADC.
-    # No service account key is hard-coded.
     credentials, _ = google.auth.default(
         scopes=[
             "https://www.googleapis.com/auth/cloud-platform"
         ]
     )
 
-    credentials.refresh(Request())
+    session = AuthorizedSession(credentials)
 
     resource = (
         f"projects/{project}"
@@ -140,9 +198,6 @@ def call_gemini_enterprise_app(prompt: str) -> dict:
         "/assistants/default_assistant"
     )
 
-    # Global service endpoint.
-    # Consult Google's endpoint documentation if
-    # your approved app requires regional routing.
     if location == "global":
         base_url = (
             "https://discoveryengine.googleapis.com"
@@ -152,34 +207,42 @@ def call_gemini_enterprise_app(prompt: str) -> dict:
             f"https://{location}-discoveryengine.googleapis.com"
         )
 
-    url = f"{base_url}/v1/{resource}:assist"
+    url = (
+        f"{base_url}/v1/{resource}:streamAssist"
+    )
 
     payload = {
         "query": {
             "text": prompt
-        },
-        "assistSkippingMode": "REQUEST_ASSIST",
+        }
     }
 
-    response = requests.post(
+    response = session.post(
         url,
-        headers={
-            "Authorization": (
-                f"Bearer {credentials.token}"
-            ),
-            "Content-Type": "application/json",
-            "X-Goog-User-Project": project,
-        },
         json=payload,
-        timeout=45,
+        headers={
+            "X-Goog-User-Project": project
+        },
+        timeout=90,
     )
 
     response.raise_for_status()
 
     response_data = response.json()
 
-    assistant_text = extract_assistant_text(
-        response_data
+    # REST StreamAssist generally returns an array
+    # of streamed response chunks.
+    if isinstance(response_data, dict):
+        chunks = [response_data]
+    elif isinstance(response_data, list):
+        chunks = response_data
+    else:
+        raise ValueError(
+            "Unexpected StreamAssist response format"
+        )
+
+    assistant_text = extract_stream_assistant_text(
+        chunks
     )
 
     return parse_recommendation_json(
