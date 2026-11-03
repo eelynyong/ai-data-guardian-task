@@ -1,3 +1,4 @@
+import { supabase } from './lib/supabase'
 import { useMemo, useRef, useState } from 'react'
 import {
   Activity, ArrowRight, Bell, BookOpen, CalendarDays,
@@ -96,13 +97,33 @@ async function loadRows(rows: CsvRow[], name: string) {
 
   try {
     // Send CSV rows to our Express middleware
+    const {
+  data: { session },
+  error: sessionError
+} = await supabase.auth.getSession()
+
+if (sessionError || !session?.access_token) {
+  setUploadError('Please sign in again before analyzing data.')
+  return
+}
     const response = await fetch('/api/v1/quality/analyze', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ rows })
-    })
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    Authorization: `Bearer ${session.access_token}`
+  },
+  body: JSON.stringify({ rows })
+})
+
+if (response.status === 401) {
+  setUploadError('Your session has expired. Please sign in again.')
+  return
+}
+
+if (response.status === 403) {
+  setUploadError('Only authorized HR users can analyze this CSV.')
+  return
+}
 
     if (!response.ok) {
       throw new Error('Middleware returned an error.')

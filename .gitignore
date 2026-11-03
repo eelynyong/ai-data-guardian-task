@@ -13,3 +13,8 @@ dist/
 .env.*.local
 *.tsbuildinfo
 *.log
+
+.env
+.env.local
+node_modules/
+dist/
