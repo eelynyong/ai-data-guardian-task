@@ -1,5 +1,6 @@
 
 import express from 'express'
+import { requireAuth, requireHr } from './auth.mjs'
 
 const app = express()
 const PORT = 3001
@@ -18,8 +19,12 @@ app.get('/api/v1/health', (req, res) => {
 })
 
 // Route 2: Analyze synthetic HR records
-app.post('/api/v1/quality/analyze', (req, res) => {
-  const rows = req.body?.rows
+app.post(
+  '/api/v1/quality/analyze', 
+  requireAuth,
+  requireHr,
+  (req, res) => {
+    const rows = req.body?.rows
 
   // Check the request before processing it
   if (
