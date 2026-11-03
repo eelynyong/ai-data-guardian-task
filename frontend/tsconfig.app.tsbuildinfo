@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/demodata.ts","./src/main.tsx"],"version":"5.7.3"}
+{"root":["./src/app.tsx","./src/authgate.tsx","./src/loginpage.tsx","./src/demodata.ts","./src/main.tsx","./src/vite-env.d.ts","./src/lib/supabase.ts"],"version":"5.7.3"}
