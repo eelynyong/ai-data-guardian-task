@@ -1,0 +1,45 @@
+
+{
+  "rows": [
+    {
+      "employee_id": "EMP001",
+      "department": "Finance",
+      "email": "ali@example.com",
+      "claim_id": "CLM001",
+      "claim_amount": "120",
+      "claim_description": "Taxi"
+    },
+    {
+      "employee_id": "EMP002",
+      "department": "IT",
+      "email": "",
+      "claim_id": "CLM002",
+      "claim_amount": "80",
+      "claim_description": "Parking"
+    },
+    {
+      "employee_id": "EMP003",
+      "department": "HR",
+      "email": "sara@example.com",
+      "claim_id": "CLM002",
+      "claim_amount": "150",
+      "claim_description": "Meal"
+    },
+    {
+      "employee_id": "EMP004",
+      "department": "Finance",
+      "email": "john@example.com",
+      "claim_id": "CLM004",
+      "claim_amount": "25000",
+      "claim_description": "Travel"
+    },
+    {
+      "employee_id": "EMP005",
+      "department": "IT",
+      "email": "nina@example.com",
+      "claim_id": "CLM005",
+      "claim_amount": "50",
+      "claim_description": "Bank account 123456789012"
+    }
+  ]
+}

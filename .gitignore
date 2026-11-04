@@ -1,20 +1,24 @@
-node_modules/
-dist/
-.env
-.env.*.local
-.DS_Store
-*.log
-.vscode/settings.json
 
+# Node.js / React / Express
 node_modules/
 dist/
-.env
-.env.local
-.env.*.local
 *.tsbuildinfo
 *.log
 
+# Python / FastAPI
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+
+# Local secrets and environment variables
 .env
-.env.local
-node_modules/
-dist/
+.env.*
+!.env.example
+
+# Operating system and editor files
+.DS_Store
+.vscode/settings.json
+
+# Local development backups
+*.backup.txt
